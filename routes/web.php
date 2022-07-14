@@ -77,8 +77,10 @@ Route::post('/addteams', [AdminController::class, 'team']);
 // Route::post('/addgallerys', 'admincontroller@postaddgallery');
 // Route::get('/userhome', 'UserController@home');
 // Route::get('/userservices', 'HomeController@uservices');
-// Route::get('/displaygallery', 'admincontroller@displaygallery');
-// Route::get('/displaytestimonial', 'UserController@displaytestimonial');
+
+Route::get('/displaygallery', [AdminController::class, 'displaygallery']);
+
+// Route::get('/displaytestimonial', 'UserController@displaytestimonial'); ---> probably mistake in coding
 Route::get('/usergallery', [UserController::class, 'gallery']);
 
 // Route::get('/userabout', function () {
