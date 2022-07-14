@@ -117,13 +117,13 @@ class AdminController extends Controller
     {
         return view('adminAddGallery');
     }
-    // public function postaddgallery(AddGallery $req)
-    // {
-    //     $data = $req->validated();
-    //     $data['galleryimage'] = substr(Storage::putFile('crgbmd-uploads', $req->file('galleryimage'), 'public'), 15);
-    //     $rep = gallery::create($data);
-    //     return redirect('/dashboard')->with('alert', 'Added to gallery successfully !');
-    // }
+    public function postaddgallery(AddGallery $req)
+    {
+        $data = $req->validated();
+        $data['galleryimage'] = substr(Storage::putFile('crgbmd-uploads', $req->file('galleryimage'), 'public'), 15);
+        $rep = gallery::create($data);
+        return redirect('/dashboard')->with('alert', 'Added to gallery successfully !');
+    }
     public function displayteam()
     {
         $res = team::all();
