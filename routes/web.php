@@ -44,11 +44,11 @@ Route::get('/addteam', function () {
 Route::get('/testimonial', [AdminController::class, 'testimonial']);
 
 Route::get('/team', [AdminController::class, 'displayteam']);
-// Route::get('/members', [AdminController::class, 'displaymembers']);
-// Route::get('/donars', [AdminController::class, 'displaydonors']);
+Route::get('/members', [AdminController::class, 'displaymembers']);
+Route::get('/donors', [AdminController::class, 'displaydonors']);
 // Route::get('/export', [AdminController::class, 'export']);
-// Route::get('/managenews', [AdminController::class, 'displaynews']);
-// Route::get('/managetestimonial', [AdminController::class, 'displaytestimonials']);
+Route::get('/managenews', [AdminController::class, 'displaynews']);
+Route::get('/managetestimonial', [AdminController::class, 'displaytestimonials']);
 // Route::get('/manageevents', [AdminController::class, 'testimonial']);
 // Route::post('/addtestimonial', [AdminController::class, 'addtestimonial']);
 // Route::post('/addnewss', [AdminController::class, 'news']);

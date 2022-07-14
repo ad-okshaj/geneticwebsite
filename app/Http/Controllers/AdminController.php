@@ -67,17 +67,17 @@ class AdminController extends Controller
     //     return view('success_register_member');
     // }
 
-    // public function displaymembers()
-    // {
-    //     $res = members::all();
-    //     return view('adminmembers', compact('res'));
-    // }
+    public function displaymembers()
+    {
+        $res = members::all();
+        return view('adminmembers', compact('res'));
+    }
 
-    // public function displaydonors()
-    // {
-    //     $res = Donate::all();
-    //     return view('admindonors', compact('res'));
-    // }
+    public function displaydonors()
+    {
+        $res = Donate::all();
+        return view('admindonors', compact('res'));
+    }
 
     // public function export()
     // {
@@ -129,29 +129,28 @@ class AdminController extends Controller
         $res = team::all();
         return view('team', compact('res'));
     }
-    // public function displaytestimonials()
-    // {
+    public function displaytestimonials()
+    {
+        $res = testimonial::all();
+        return view('managetestimonial', compact('res'));
+    }
+    public function displaygallery()
+    {
+        $res = gallery::all();
+        return view('managegallery', compact('res'));
+    }
 
-    //     $res = testimonial::all();
-    //     return view('managetestimonial', compact('res'));
-    // }
-    // public function displaygallery()
-    // {
-    //     $res = gallery::all();
-    //     return view('managegallery', compact('res'));
-    // }
+    public function displaynews()
+    {
+        $res = news::all();
+        return view('managenews', compact('res'));
+    }
 
-    // public function displaynews()
-    // {
-    //     $res = news::all();
-    //     return view('managenews', compact('res'));
-    // }
-
-    // public function displayevents()
-    // {
-    //     $res = events::all();
-    //     return view('manageevents', compact('res'));
-    // }
+    public function displayevents()
+    {
+        $res = events::all();
+        return view('manageevents', compact('res'));
+    }
 
     // public function delete($id, Request $request)
     // {
