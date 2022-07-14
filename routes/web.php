@@ -24,12 +24,12 @@ Route::get('/', );
 Route::get('/admin', function () {
     return redirect('/dashboard');
 });
-Route::get('/dashboard',[HomeController::class, 'index']);
+Route::get('/dashboard',[HomeController::class, 'index'])->middleware('auth');
 
 Route::get('/', function () {
     return view('welcome');
 });
-
+ 
 Route::get('/addevents', function () {
     return view('addevents');
 });

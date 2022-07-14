@@ -27,7 +27,7 @@ class HomeController extends Controller
 
     public function redirectToUhome()
     {
-        return redirect('/userhome');
+        return redirect('/userhome'); 
     }
     
     public function  uservices()
