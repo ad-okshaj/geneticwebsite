@@ -93,7 +93,9 @@ Route::post('/addteams', [AdminController::class, 'team']);
 // Route::get('/userresources', function () {
 //     return view('uresources');
 // });
-// Route::get('/contact', 'UserController@contact');
+
+
+Route::get('/contact', [UserController::class, 'contact']);
 
 Route::get('/userrgd', function () {
     return view('urgd');
