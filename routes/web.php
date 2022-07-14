@@ -76,7 +76,7 @@ Route::post('/addteams', [AdminController::class, 'team']);
 // Route::get('/addgallery', 'admincontroller@addgallery');
 // Route::post('/addgallerys', 'admincontroller@postaddgallery');
 // Route::get('/userhome', 'UserController@home');
-// Route::get('/userservices', 'HomeController@uservices');
+Route::get('/userservices', [HomeController::class, 'uservices']);
 
 Route::get('/displaygallery', [AdminController::class, 'displaygallery']);
 

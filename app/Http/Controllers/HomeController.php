@@ -28,8 +28,8 @@ class HomeController extends Controller
     // {
     //     return redirect('/userhome');
     // }
-    // public function  uservices()
-    // {
-    //     return view('uservices');
-    // }
+    public function  uservices()
+    {
+        return view('uservices');
+    }
 }
