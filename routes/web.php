@@ -79,7 +79,7 @@ Route::post('/addteams', [AdminController::class, 'team']);
 // Route::get('/userservices', 'HomeController@uservices');
 // Route::get('/displaygallery', 'admincontroller@displaygallery');
 // Route::get('/displaytestimonial', 'UserController@displaytestimonial');
-// Route::get('/usergallery', 'UserController@gallery');
+Route::get('/usergallery', [UserController::class, 'gallery']);
 // Route::get('/userabout', function () {
 //     $sc = team::where('committe', 'scientific')->get();
 //     $ad = team::where('committe', 'advisory')->get();
@@ -89,10 +89,12 @@ Route::post('/addteams', [AdminController::class, 'team']);
 // Route::get('/userpartners', function () {
 //     return view('upartners');
 // });
-// Route::get('/userevents', 'UserController@userevents');
-// Route::get('/userresources', function () {
-//     return view('uresources');
-// });
+
+
+Route::get('/userevents', [UserController::class, 'userevents']);
+Route::get('/userresources', function () {
+    return view('uresources');
+});
 
 
 Route::get('/contact', [UserController::class, 'contact']);

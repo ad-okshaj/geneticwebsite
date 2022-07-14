@@ -70,6 +70,6 @@ class UserController extends Controller
         $events = Cache::get('events', function () {
             return events::orderBy('eventdate', 'desc')->get();
         });
-        return view('/uevents')->with(['events' => $events]);
+    return view('/uevents')->with(['events' => $events]);
     }
 }
