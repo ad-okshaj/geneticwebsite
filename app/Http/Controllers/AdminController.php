@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\EventImage;
-use App\events;
-use App\gallery;
+use App\Models\EventImage;
+use App\Models\Events;
+use App\Models\gallery;
 use App\Http\Requests\AddEvent;
 use App\Http\Requests\AddGallery;
 use App\Http\Requests\addmember;
@@ -14,11 +14,11 @@ use App\Http\Requests\AddTestimonial;
 use App\Http\Requests\MemberEmailRequest;
 use App\Mail\MemberEmail;
 use App\Mail\MemberRegistered;
-use App\members;
-use App\news;
-use App\team;
-use App\testimonial;
-use App\Donate;
+use App\Models\Members;
+use App\Models\News;
+use App\Models\Team;
+use App\Models\Testimonial;
+use App\Models\Donate;
 use App\Exports\MembersExport;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
