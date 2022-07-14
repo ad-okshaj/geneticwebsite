@@ -80,22 +80,22 @@ Route::post('/addteams', [AdminController::class, 'team']);
 // Route::get('/displaygallery', 'admincontroller@displaygallery');
 // Route::get('/displaytestimonial', 'UserController@displaytestimonial');
 Route::get('/usergallery', [UserController::class, 'gallery']);
+
 // Route::get('/userabout', function () {
 //     $sc = team::where('committe', 'scientific')->get();
 //     $ad = team::where('committe', 'advisory')->get();
 //     $mg = team::where('committe', 'managing')->get();
 //     return view('uabout')->with(['sc' => $sc, 'ad' => $ad, 'mg' => $mg]);
 // });
-// Route::get('/userpartners', function () {
-//     return view('upartners');
-// });
 
+Route::get('/userpartners', function () {
+    return view('upartners');
+});
 
 Route::get('/userevents', [UserController::class, 'userevents']);
 Route::get('/userresources', function () {
     return view('uresources');
 });
-
 
 Route::get('/contact', [UserController::class, 'contact']);
 
@@ -110,13 +110,11 @@ Route::get('/supportus', function () {
 Route::get('eventInfo/{id}', [UserController::class, 'eventInfo']);
 Route::get('thankyou/{id}',  [DonateController::class, 'store']);
 
-
 Route::resource('/donate_form', DonateController::class);
 
 // Auth::routes(['verify' => false, 'register' => false]);
 // Route::get('/register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 // Route::post('/register', 'Auth\RegisterController@register')->name('register');
-
 
 Route::get('/userhome', [UserController::class, 'home']);
 Route::get('/download/{file}', function ($file) {
