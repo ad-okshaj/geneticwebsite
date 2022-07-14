@@ -73,7 +73,7 @@ Route::post('/addteams', [AdminController::class, 'team']);
 
 
 // Route::get('/', 'HomeController@redirectToUhome');
-// Route::get('/addgallery', 'admincontroller@addgallery');
+Route::get('/addgallery', [AdminController::class, 'addgallery'] ); 
 Route::post('/addgallerys', [AdminController::class, 'postaddgallery']);  
 // Route::get('/userhome', 'UserController@home'); ----> redundant route
 Route::get('/userservices', [HomeController::class, 'uservices']);

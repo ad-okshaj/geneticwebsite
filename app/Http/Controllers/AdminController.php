@@ -117,6 +117,7 @@ class AdminController extends Controller
     {
         return view('adminAddGallery');
     }
+
     public function postaddgallery(AddGallery $req)
     {
         $data = $req->validated();
@@ -124,6 +125,7 @@ class AdminController extends Controller
         $rep = gallery::create($data);
         return redirect('/dashboard')->with('alert', 'Added to gallery successfully !');
     }
+    
     public function displayteam()
     {
         $res = team::all();
