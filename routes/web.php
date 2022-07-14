@@ -97,12 +97,14 @@ Route::post('/addteams', [AdminController::class, 'team']);
 // Route::get('/userrgd', function () {
 //     return view('urgd');
 // });
-// Route::get('/supportus', function () {
-//     return view('usupportus');
-// });
+Route::get('/supportus', function () {
+    return view('usupportus');
+});
 
 Route::get('eventInfo/{id}', [UserController::class, 'eventInfo']);
-// Route::get('thankyou/{id}', 'DonateController@store');
+Route::get('thankyou/{id}',  [DonateController::class, 'store']);
+
+
 Route::resource('/donate_form', DonateController::class);
 
 // Auth::routes(['verify' => false, 'register' => false]);

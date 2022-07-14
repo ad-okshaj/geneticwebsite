@@ -55,6 +55,7 @@ class DonateController extends Controller
         Mail::to('anirban@nitte.edu.in')->send(new DonationInterestMail($data));
         Mail::to('arati1239@gmail.com')->send(new DonationInterestMail($data));
         return view('thankyou', ['res' => $data, 'date' => $current_time]);
+
     }
 
     /**
