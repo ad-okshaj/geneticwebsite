@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\DonateController;
 
 
 /*
@@ -102,11 +103,12 @@ Route::post('/addteams', [AdminController::class, 'team']);
 
 Route::get('eventInfo/{id}', [UserController::class, 'eventInfo']);
 // Route::get('thankyou/{id}', 'DonateController@store');
-Route::resource('/donate_form', 'DonateController');
+Route::resource('/donate_form', DonateController::class);
 
 // Auth::routes(['verify' => false, 'register' => false]);
 // Route::get('/register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 // Route::post('/register', 'Auth\RegisterController@register')->name('register');
+
 
 Route::get('/userhome', [UserController::class, 'home']);
 Route::get('/download/{file}', function ($file) {
