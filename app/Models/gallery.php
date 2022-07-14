@@ -1,10 +1,10 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class gallery extends Model
+class Gallery extends Model
 {
     protected $table = 'gallery';
     protected $fillable = ['imagetitle', 'description', 'galleryimage']; //columns in database

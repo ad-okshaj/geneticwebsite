@@ -1,10 +1,10 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class team extends Model
+class Team extends Model
 {
     protected $table = 'team';
     protected $fillable = ['name', 'affiliation', 'email', 'committe', 'designation', 'position', 'photo']; //columns in database

@@ -1,11 +1,11 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use App\EventImage;
 
-class events extends Model
+class Events extends Model
 {
     protected $table = 'events';
     protected $fillable = ['id', 'eventname', 'eventtype', 'description', 'eventdate', 'eventvenue', 'eventimage'];

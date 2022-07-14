@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Team;
-use App\Events;
-use App\Members;
+use App\Models\Team;
+use App\Models\Events;
+use App\Models\Members;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
