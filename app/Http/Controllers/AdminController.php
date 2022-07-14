@@ -34,11 +34,11 @@ class AdminController extends Controller
     //     if ($req->has('flyer')) {
     //         $data['flyer'] = substr(Storage::putFile('crgbmd-uploads', $req->file('flyer'), 'public'), 15);
     //     }
-
     //     $rep = news::create($data);
 
     //     return redirect('/dashboard')->with('alert', 'News added successfully !');
     // }
+
     public function testimonial()
     {
         return view('admintestimonial');
@@ -79,10 +79,10 @@ class AdminController extends Controller
         return view('admindonors', compact('res'));
     }
 
-    // public function export()
-    // {
-    //     return Excel::download(new MembersExport, 'users.xlsx');
-    // }
+    public function export()
+    {
+        return Excel::download(new MembersExport, 'users.xlsx');
+    }
 
     // public function addtestimonial(AddTestimonial $req)
     // {
@@ -113,10 +113,10 @@ class AdminController extends Controller
     //     return redirect('/dashboard')->with('alert', 'Member updated successfully !');
     // }
 
-    // public function addgallery()
-    // {
-    //     return view('adminAddGallery');
-    // }
+    public function addgallery()
+    {
+        return view('adminAddGallery');
+    }
     // public function postaddgallery(AddGallery $req)
     // {
     //     $data = $req->validated();

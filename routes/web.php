@@ -49,12 +49,13 @@ Route::get('/donors', [AdminController::class, 'displaydonors']);
 // Route::get('/export', [AdminController::class, 'export']);
 Route::get('/managenews', [AdminController::class, 'displaynews']);
 Route::get('/managetestimonial', [AdminController::class, 'displaytestimonials']);
-// Route::get('/manageevents', [AdminController::class, 'testimonial']);
+
+Route::get('/manageevents', [AdminController::class, 'testimonial']);
 // Route::post('/addtestimonial', [AdminController::class, 'addtestimonial']);
 // Route::post('/addnewss', [AdminController::class, 'news']);
-// Route::post('/addeventss', [AdminController::class, 'events']);
-// Route::post('/addmember', [AdminController::class, 'member']);
-// Route::post('/addteams', [AdminController::class, 'team']);
+Route::post('/addeventss', [AdminController::class, 'events']);
+Route::post('/addmember', [AdminController::class, 'member']);
+Route::post('/addteams', [AdminController::class, 'team']);
 // Route::post('/delete/{id}', [AdminController::class, 'delete']);
 // Route::post('/deletegalleryimage/{id}', [AdminController::class, 'deletegalleryimage']);
 // Route::post('/deletenews/{id}', [AdminController::class, 'deletenews']);
