@@ -84,34 +84,34 @@ class AdminController extends Controller
     //     return Excel::download(new MembersExport, 'users.xlsx');
     // }
 
-    // public function addtestimonial(AddTestimonial $req)
-    // {
-    //     $data = $req->validated();
-    //     $data['timage'] = substr(Storage::putFile('crgbmd-uploads', $req->file('timage'), 'public'), 15);
-    //     $rep = testimonial::create($data);
-    //     return redirect('/dashboard')->with('alert', 'Testimonial added successfully !');
-    // }
-    // public function team(addteam $req)
-    // {
-    //     $data = $req->validated();
-    //     $data['photo'] = substr(Storage::putFile('crgbmd-uploads', $req->file('photo'), 'public'), 15);
-    //     $rep = team::create($data);
-    //     return redirect('/dashboard')->with('alert', 'Member added successfully !');
-    // }
+    public function addtestimonial(AddTestimonial $req)
+    {
+        $data = $req->validated();
+        $data['timage'] = substr(Storage::putFile('crgbmd-uploads', $req->file('timage'), 'public'), 15);
+        $rep = testimonial::create($data);
+        return redirect('/dashboard')->with('alert', 'Testimonial added successfully !');
+    }
+    public function team(addteam $req)
+    {
+        $data = $req->validated();
+        $data['photo'] = substr(Storage::putFile('crgbmd-uploads', $req->file('photo'), 'public'), 15);
+        $rep = team::create($data);
+        return redirect('/dashboard')->with('alert', 'Member added successfully !');
+    }
 
-    // public function editTeam($id)
-    // {
-    //     $res = team::where('id', '=', $id)->get();
-    //     return view('editteam', compact('res'));
-    // }
+    public function editTeam($id)
+    {
+        $res = team::where('id', '=', $id)->get();
+        return view('editteam', compact('res'));
+    }
 
-    // public function editqry(team $id, addteam $req)
-    // {
-    //     $data = $req->validated();
-    //     $data['photo'] = substr(Storage::putFile('crgbmd-uploads', $req->file('photo'), 'public'), 15);
-    //     $id->update($data);
-    //     return redirect('/dashboard')->with('alert', 'Member updated successfully !');
-    // }
+    public function editqry(team $id, addteam $req)
+    {
+        $data = $req->validated();
+        $data['photo'] = substr(Storage::putFile('crgbmd-uploads', $req->file('photo'), 'public'), 15);
+        $id->update($data);
+        return redirect('/dashboard')->with('alert', 'Member updated successfully !');
+    }
 
     public function addgallery()
     {
@@ -278,10 +278,10 @@ class AdminController extends Controller
     //         $request->session()->flash('status', 'success');
     //         $request->session()->flash('message', 'Email sent successfully !');
     //     } catch (\Exception $e) {
-    //         \Log::error($e);
+    //         Log::error($e);
     //         $request->session()->flash('status', 'danger');
     //         $request->session()->flash('message', 'An error occurred');
     //     }
     //     return back();
     // }
-}
+    }

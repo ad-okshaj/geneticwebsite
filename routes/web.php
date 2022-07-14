@@ -52,11 +52,16 @@ Route::get('/donors', [AdminController::class, 'displaydonors']);
 Route::get('/managenews', [AdminController::class, 'displaynews']);
 Route::get('/managetestimonial', [AdminController::class, 'displaytestimonials']);
 Route::get('/manageevents', [AdminController::class, 'testimonial']);
-// Route::post('/addtestimonial', [AdminController::class, 'addtestimonial']);
+
+Route::post('/addtestimonial', [AdminController::class, 'addtestimonial']); //cmt this
+
 Route::post('/addnewss', [AdminController::class, 'news']);
 Route::post('/addeventss', [AdminController::class, 'events']);
 Route::post('/addmember', [AdminController::class, 'member']);
 Route::post('/addteams', [AdminController::class, 'team']);
+
+
+//cmt these
 // Route::post('/delete/{id}', [AdminController::class, 'delete']);
 // Route::post('/deletegalleryimage/{id}', [AdminController::class, 'deletegalleryimage']);
 // Route::post('/deletenews/{id}', [AdminController::class, 'deletenews']);
@@ -65,10 +70,10 @@ Route::post('/addteams', [AdminController::class, 'team']);
 // Route::post('/sendMemberEmail/{member}', [AdminController::class, 'sendEmailToMember']);
 // Route::post('/deleteMember/{member}', [AdminController::class, 'deleteMember']);
 // Route::post('/deleteDonor/{donor}', [AdminController::class, 'deleteDonor']);
-// Route::post('/deleteDonorMultiple', [AdminController::class, 'deleteDonorMultiple']);
+Route::post('/deleteDonorMultiple', [AdminController::class, 'deleteDonorMultiple']);
 // Route::post('/editTeam/{id}', [AdminController::class, 'editTeam']);
 // Route::post('/editqry/{id}', [AdminController::class, 'editqry']);
-
+//cmt these
 
 
 
