@@ -24,10 +24,12 @@ class HomeController extends Controller
         $cnt3 = Events::count();
          return view('admindashboard')->with(['total' => $cnt, 'teamno' => $cnt2, 'eventno' => $cnt3]);
     }
-    // public function redirectToUhome()
-    // {
-    //     return redirect('/userhome');
-    // }
+
+    public function redirectToUhome()
+    {
+        return redirect('/userhome');
+    }
+    
     public function  uservices()
     {
         return view('uservices');
