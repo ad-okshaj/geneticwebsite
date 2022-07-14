@@ -49,27 +49,27 @@ class UserController extends Controller
         //\Log::debug($news);
         return view('uhome')->with(['total' => $cnt, 'teamno' => $cnt2, 'eventno' => $cnt3, 'events' => $events, 'gallery' => $gallery, 'news' => $news, 'testimonial' => $testimonial]);
     }
-    // public function gallery()
-    // {
-    //     $gallery = Cache::get('gallery', function () {
-    //         return gallery::get();
-    //     });
-    //     return view('ugallery')->with(['gallery' => $gallery]);
-    // }
-    // public function contact()
-    // {
-    //     return view('ucontact');
-    // }
-    // public function eventInfo(events $id)
-    // {
-    //     //$res=events::where('id','=',$id)->get();
-    //     return view('/ueventinfo', ['res' => $id]);
-    // }
-    // public function userevents()
-    // {
-    //     $events = Cache::get('events', function () {
-    //         return events::orderBy('eventdate', 'desc')->get();
-    //     });
-    //     return view('/uevents')->with(['events' => $events]);
-    // }
+    public function gallery()
+    {
+        $gallery = Cache::get('gallery', function () {
+            return gallery::get();
+        });
+        return view('ugallery')->with(['gallery' => $gallery]);
+    }
+    public function contact()
+    {
+        return view('ucontact');
+    }
+    public function eventInfo(events $id)
+    {
+        //$res=events::where('id','=',$id)->get();
+        return view('/ueventinfo', ['res' => $id]);
+    }
+    public function userevents()
+    {
+        $events = Cache::get('events', function () {
+            return events::orderBy('eventdate', 'desc')->get();
+        });
+        return view('/uevents')->with(['events' => $events]);
+    }
 }
