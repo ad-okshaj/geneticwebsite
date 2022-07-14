@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\EventImage;
 use App\Models\Events;
-use App\Models\gallery;
+use App\Models\Gallery;
 use App\Http\Requests\AddEvent;
 use App\Http\Requests\AddGallery;
 use App\Http\Requests\addmember;

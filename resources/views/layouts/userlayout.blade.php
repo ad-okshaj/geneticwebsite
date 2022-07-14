@@ -41,6 +41,8 @@
 
 <body>
     <h1>User Layout</h1>
+    @yield('usercontent')
+
 </body>
 
 </html>

@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -68,6 +70,4 @@ Route::post('/addteams', [AdminController::class, 'team']);
 // Route::post('/editTeam/{id}', [AdminController::class, 'editTeam']);
 // Route::post('/editqry/{id}', [AdminController::class, 'editqry']);
 
-
-
-// Route::get('/userhome', [UserController::class, 'home']);
+Route::get('/userhome', [UserController::class, 'home']);
