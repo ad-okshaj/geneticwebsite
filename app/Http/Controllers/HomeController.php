@@ -1,25 +1,27 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\team;
-use App\events;
-use App\members;
+
+use App\Team;
+use App\Events;
+use App\Members;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
 
 class HomeController extends Controller
 {
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
+    // /**
+    //  * Show the application dashboard.
+    //  *
+    //  * @return \Illuminate\Contracts\Support\Renderable
+
+    //  */
     public function index()
     {
-        $cnt = members::count();
-        $cnt2 = team::count();
-        $cnt3 = events::count();
+        $cnt = Members::count();
+        $cnt2 = Team::count();
+        $cnt3 = Events::count();
          return view('admindashboard')->with(['total' => $cnt, 'teamno' => $cnt2, 'eventno' => $cnt3]);
     }
     // public function redirectToUhome()
