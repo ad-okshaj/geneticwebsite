@@ -39,7 +39,7 @@ class addmember extends FormRequest
             'Additional-Info' => 'min:3|max:1000|nullable',
             'area_of_expertise' => 'string|required',
             'hospital_associated_with' => 'string|required',
-            'g-recaptcha-response' => new Captcha,
+            // 'g-recaptcha-response' => new Captcha,
         ];
     }
 }
