@@ -16,7 +16,8 @@
 </head>
 
 <body>
-    <h1>admin layout</h1>
+    <h1>Admin layout</h1>
+    @yield('content2')
 </body>
 
 </html>

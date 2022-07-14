@@ -1,8 +1,7 @@
 @extends('layouts.adminlayout')
 @section('title')
-    CRGBMD INDIA | Dashboard
+    CRGBMD INDIA | Add Team
 @endsection
-
 @section('content2')
-    <h1>Admin Dashboard</h1>
+    <h1>Add Team</h1>
 @endsection
