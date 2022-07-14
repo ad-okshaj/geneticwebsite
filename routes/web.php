@@ -1,9 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
 
 
 /*
@@ -28,7 +29,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
 Route::get('/addevents', function () {
     return view('addevents');
 });
@@ -44,14 +44,12 @@ Route::get('/addteam', function () {
 
 
 Route::get('/testimonial', [AdminController::class, 'testimonial']);
-
 Route::get('/team', [AdminController::class, 'displayteam']);
 Route::get('/members', [AdminController::class, 'displaymembers']);
 Route::get('/donors', [AdminController::class, 'displaydonors']);
 // Route::get('/export', [AdminController::class, 'export']);
 Route::get('/managenews', [AdminController::class, 'displaynews']);
 Route::get('/managetestimonial', [AdminController::class, 'displaytestimonials']);
-
 Route::get('/manageevents', [AdminController::class, 'testimonial']);
 // Route::post('/addtestimonial', [AdminController::class, 'addtestimonial']);
 Route::post('/addnewss', [AdminController::class, 'news']);
@@ -70,4 +68,48 @@ Route::post('/addteams', [AdminController::class, 'team']);
 // Route::post('/editTeam/{id}', [AdminController::class, 'editTeam']);
 // Route::post('/editqry/{id}', [AdminController::class, 'editqry']);
 
+
+
+
+// Route::get('/', 'HomeController@redirectToUhome');
+// Route::get('/addgallery', 'admincontroller@addgallery');
+// Route::post('/addgallerys', 'admincontroller@postaddgallery');
+// Route::get('/userhome', 'UserController@home');
+// Route::get('/userservices', 'HomeController@uservices');
+// Route::get('/displaygallery', 'admincontroller@displaygallery');
+// Route::get('/displaytestimonial', 'UserController@displaytestimonial');
+// Route::get('/usergallery', 'UserController@gallery');
+// Route::get('/userabout', function () {
+//     $sc = team::where('committe', 'scientific')->get();
+//     $ad = team::where('committe', 'advisory')->get();
+//     $mg = team::where('committe', 'managing')->get();
+//     return view('uabout')->with(['sc' => $sc, 'ad' => $ad, 'mg' => $mg]);
+// });
+// Route::get('/userpartners', function () {
+//     return view('upartners');
+// });
+// Route::get('/userevents', 'UserController@userevents');
+// Route::get('/userresources', function () {
+//     return view('uresources');
+// });
+// Route::get('/contact', 'UserController@contact');
+// Route::get('/userrgd', function () {
+//     return view('urgd');
+// });
+// Route::get('/supportus', function () {
+//     return view('usupportus');
+// });
+
+Route::get('eventInfo/{id}', [UserController::class, 'eventInfo']);
+// Route::get('thankyou/{id}', 'DonateController@store');
+Route::resource('/donate_form', 'DonateController');
+
+// Auth::routes(['verify' => false, 'register' => false]);
+// Route::get('/register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+// Route::post('/register', 'Auth\RegisterController@register')->name('register');
+
 Route::get('/userhome', [UserController::class, 'home']);
+Route::get('/download/{file}', function ($file) {
+    return Storage::download('crgbmd-uploads/' . $file);
+});
+ 
