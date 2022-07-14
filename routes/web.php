@@ -24,11 +24,16 @@ Route::get('/', );
 Route::get('/admin', function () {
     return redirect('/dashboard');
 });
-Route::get('/dashboard',[HomeController::class, 'index'])->middleware('auth');
 
-Route::get('/', function () {
-    return view('welcome');
+Route::controller(HomeController::class)->group(function(){
+    Route::get('/dashboard','index')->middleware('auth');
+    Route::get('/','redirectToUhome');
+    Route::get('/userservices','uservices');
 });
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
  
 Route::get('/addevents', function () {
     return view('addevents');
@@ -44,21 +49,44 @@ Route::get('/addteam', function () {
 });
 
 
-Route::get('/testimonial', [AdminController::class, 'testimonial']);
-Route::get('/team', [AdminController::class, 'displayteam']);
-Route::get('/members', [AdminController::class, 'displaymembers']);
-Route::get('/donors', [AdminController::class, 'displaydonors']);
+Route::controller(UserController::class)->group(function(){
+    Route::get('/userevents','userevents');
+    Route::get('/userhome','home');
+    Route::get('eventInfo/{id}', 'eventInfo');
+    Route::get('/contact','contact');
+    Route::get('/usergallery','gallery');
+});
+
+Route::controller(DonateController::class)->group(function(){
+    Route::get('/userevents','userevents');
+    Route::resource('/donate_form', DonateController::class);
+    Route::get('thankyou/{id}','store');
+});
+
+Route::controller(AdminController::class)->group(function(){
+    Route::get('/testimonial', 'testimonial');
+    Route::get('/team','displayteam');
+    Route::get('/members', 'displaymembers');
+    Route::get('/donors', 'displaydonors');
+    Route::get('/managenews', 'displaynews');
+    Route::get('/managetestimonial',  'displaytestimonials');
+    Route::get('/manageevents',  'testimonial');
+    Route::post('/addtestimonial',  'addtestimonial'); //cmt this
+    Route::post('/addnewss',  'news');
+    Route::post('/addeventss',  'events');
+    Route::post('/addmember', 'member');
+    Route::post('/addteams', 'team');
+    Route::get('/addgallery', 'addgallery'); 
+    Route::post('/addgallerys', 'postaddgallery'); 
+    Route::get('/displaygallery', 'displaygallery');
+    Route::post('/deleteDonorMultiple',  'deleteDonorMultiple');
+});
+
+
+
+
+
 // Route::get('/export', [AdminController::class, 'export']);
-Route::get('/managenews', [AdminController::class, 'displaynews']);
-Route::get('/managetestimonial', [AdminController::class, 'displaytestimonials']);
-Route::get('/manageevents', [AdminController::class, 'testimonial']);
-
-Route::post('/addtestimonial', [AdminController::class, 'addtestimonial']); //cmt this
-
-Route::post('/addnewss', [AdminController::class, 'news']);
-Route::post('/addeventss', [AdminController::class, 'events']);
-Route::post('/addmember', [AdminController::class, 'member']);
-Route::post('/addteams', [AdminController::class, 'team']);
 
 
 //cmt these
@@ -70,24 +98,13 @@ Route::post('/addteams', [AdminController::class, 'team']);
 // Route::post('/sendMemberEmail/{member}', [AdminController::class, 'sendEmailToMember']);
 // Route::post('/deleteMember/{member}', [AdminController::class, 'deleteMember']);
 // Route::post('/deleteDonor/{donor}', [AdminController::class, 'deleteDonor']);
-Route::post('/deleteDonorMultiple', [AdminController::class, 'deleteDonorMultiple']);
 // Route::post('/editTeam/{id}', [AdminController::class, 'editTeam']);
 // Route::post('/editqry/{id}', [AdminController::class, 'editqry']);
 //cmt these
 
 
-
-Route::get('/', [HomeController::class, 'redirectToUhome']);
-Route::get('/addgallery', [AdminController::class, 'addgallery'] ); 
-Route::post('/addgallerys', [AdminController::class, 'postaddgallery']);  
 // Route::get('/userhome', 'UserController@home'); ----> redundant route
-Route::get('/userservices', [HomeController::class, 'uservices']);
-
-Route::get('/displaygallery', [AdminController::class, 'displaygallery']);
-
 // Route::get('/displaytestimonial', 'UserController@displaytestimonial'); ---> probably mistake in coding
-Route::get('/usergallery', [UserController::class, 'gallery']);
-
 // Route::get('/userabout', function () {
 //     $sc = team::where('committe', 'scientific')->get();
 //     $ad = team::where('committe', 'advisory')->get();
@@ -99,12 +116,9 @@ Route::get('/userpartners', function () {
     return view('upartners');
 });
 
-Route::get('/userevents', [UserController::class, 'userevents']);
 Route::get('/userresources', function () {
     return view('uresources');
 });
-
-Route::get('/contact', [UserController::class, 'contact']);
 
 Route::get('/userrgd', function () {
     return view('urgd');
@@ -114,17 +128,13 @@ Route::get('/supportus', function () {
     return view('usupportus');
 });
 
-Route::get('eventInfo/{id}', [UserController::class, 'eventInfo']);
-Route::get('thankyou/{id}',  [DonateController::class, 'store']);
-
-Route::resource('/donate_form', DonateController::class);
-
 // Auth::routes(['verify' => false, 'register' => false]);
 // Route::get('/register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 // Route::post('/register', 'Auth\RegisterController@register')->name('register');
 
-Route::get('/userhome', [UserController::class, 'home']);
+
 Route::get('/download/{file}', function ($file) {
     return Storage::download('crgbmd-uploads/' . $file);
 });
  
+
