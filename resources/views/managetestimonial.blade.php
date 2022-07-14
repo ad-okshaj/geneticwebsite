@@ -3,5 +3,5 @@
     MANAGE-TESTIMONIALS
 @endsection
 @section('content2')
-    <h1>Display Testimonials - Manage Tesimonial</h1>
+    <h1>Display Testimonials - Manage Testimonial</h1>
 @endsection

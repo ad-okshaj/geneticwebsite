@@ -28,33 +28,33 @@ use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
 {
-    // public function news(addnews $req)
-    // {
-    //     $data = $req->validated();
-    //     if ($req->has('flyer')) {
-    //         $data['flyer'] = substr(Storage::putFile('crgbmd-uploads', $req->file('flyer'), 'public'), 15);
-    //     }
-    //     $rep = news::create($data);
+    public function news(addnews $req)
+    {
+        $data = $req->validated();
+        if ($req->has('flyer')) {
+            $data['flyer'] = substr(Storage::putFile('crgbmd-uploads', $req->file('flyer'), 'public'), 15);
+        }
+        $rep = News::create($data);
 
-    //     return redirect('/dashboard')->with('alert', 'News added successfully !');
-    // }
+        return redirect('/dashboard')->with('alert', 'News added successfully !');
+    }
 
     public function testimonial()
     {
         return view('admintestimonial');
     }
-    // public function events(AddEvent $req)
-    // {
-    //     $data = $req->validated();
-    //     $data['eventimage'] = substr(Storage::putFile('crgbmd-uploads', $req->file('eventimage'), 'public'), 15);
-    //     $rep = events::create($data);
-    //     if ($req->has('images')) {
-    //         foreach ($req->file('images') as $image) {
-    //             EventImage::create(['image' => substr(Storage::putFile('crgbmd-uploads', $image, 'public'), 15), 'event_id' => $rep->id]);
-    //         }
-    //     }
-    //     return redirect('/dashboard')->with('alert', 'Event added successfully !');
-    // }
+    public function events(AddEvent $req)
+    {
+        $data = $req->validated();
+        $data['eventimage'] = substr(Storage::putFile('crgbmd-uploads', $req->file('eventimage'), 'public'), 15);
+        $rep = events::create($data);
+        if ($req->has('images')) {
+            foreach ($req->file('images') as $image) {
+                EventImage::create(['image' => substr(Storage::putFile('crgbmd-uploads', $image, 'public'), 15), 'event_id' => $rep->id]);
+            }
+        }
+        return redirect('/dashboard')->with('alert', 'Event added successfully !');
+    }
 
     // public function member(addmember $req)
     // {
@@ -79,10 +79,10 @@ class AdminController extends Controller
         return view('admindonors', compact('res'));
     }
 
-    public function export()
-    {
-        return Excel::download(new MembersExport, 'users.xlsx');
-    }
+    // public function export()
+    // {
+    //     return Excel::download(new MembersExport, 'users.xlsx');
+    // }
 
     // public function addtestimonial(AddTestimonial $req)
     // {
