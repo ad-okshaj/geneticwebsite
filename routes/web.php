@@ -59,7 +59,12 @@ Route::get('/supportus', function () {
     return view('usupportus');
 }); 
 
-Route::get('/login', [UserController::class, 'login'])->name('login')->middleware('guest');
+// Show Register Form and Login
+// Route::post('/logout2', [UserController::class, 'logout2']);
+// Route::get('/login', [UserController::class, 'login'])->name('login');
+// Route::get('/register', [UserController::class, 'register'])->name('register');
+// Route::post('/users', [UserController::class, 'store']);
+
 
 
 Route::controller(HomeController::class)->group(function(){

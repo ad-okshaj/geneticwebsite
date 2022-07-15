@@ -1,21 +1,46 @@
 <?php
-
 namespace App\Http\Controllers;
 use Carbon\Carbon;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Cache;
 use App\Models\members;
 use App\Models\team;
 use App\Models\events;
-
 use App\Models\gallery;
 use App\Models\news;
 use App\Models\testimonial;
 
 class UserController extends Controller
 {
-
+    // public function login() {
+    //     return view('');
+    // }
+    // public function register() {
+    //     return view('users.register');
+    // }
+    // public function logout2(Request $request) {
+    //     auth()->logout();
+    //     $request->session()->invalidate();
+    //     $request->session()->regenerateToken();
+    //     return redirect('/logout2')->with('message', 'You have been logged out!');
+    // }
+    public function store(Request $request) {
+        $formFields = $request->validate([
+            'name' => ['required', 'min:3'],
+            'email' => ['required', 'email', Rule::unique('users', 'email')],
+            'password' => 'required|confirmed|min:6'
+        ]);
+        // Hash Password
+        $formFields['password'] = bcrypt($formFields['password']);
+        // Create User
+        $user = User::create($formFields);
+        // Login
+        auth()->login($user);
+        return redirect('/logout2')->with('message', 'User created and logged in');
+    }
     public function home()
     {
         $cnt3 = Cache::get('event_count', function () {
@@ -72,10 +97,4 @@ class UserController extends Controller
         });
     return view('/uevents')->with(['events' => $events]);
     }
-
-    public function login() {
-        return view('layouts.app');
-    }
-
-
 }
