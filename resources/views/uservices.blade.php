@@ -3,11 +3,11 @@
     CRGBMD-RESEARCH
 @endsection
 @section('usercontent')
-    {{-- <style>
-        li {
+    <style>
+        .mr-btm-li {
             margin-bottom: 40px;
         }
-    </style> --}}
+    </style>
     <!--parallax-->
     <div
         style="  background: url(/images/services.jpg);
@@ -265,7 +265,7 @@
                             <img src="{{ asset('/images/research1.jpeg') }}" class="img-fluid">
                             <ul style="text-align: justify;">
                                 <br>
-                                <li>
+                                <li class="mr-btm-li">
                                     Alexis H Bennett, Marie Francoise O’Donohue, Stacey R Gundry, Aye T Chan, Jeffery
                                     Widrick,
                                     Isabelle Draper, <b>Anirban Chakraborty,</b> Yi Zhou, Leonard I Zon, Pierre-Emmanuel
@@ -274,7 +274,7 @@
                                     growth and regeneration by modulation of translational processes. PLoS Genetics 14(3):
                                     e1007226
                                 </li>
-                                <li>
+                                <li class="mr-btm-li">
                                     <b>Anirban Chakraborty,</b> Tamayo Uechi, Yukari Nakajima, Hanna T. Gazda,
                                     Marie-Françoise
                                     O’Donohue, Pierre-Emmanuel Gleizes, and Naoya Kenmochi. 2018. Cross talk between TP53
@@ -284,66 +284,66 @@
                                     1839-
                                     1845.
                                 </li>
-                                <li>
+                                <li class="mr-btm-li">
                                     <b>Anirban Chakraborty</b> and Indrani Karunasagar. 2015. Faulty ribosomes and human
                                     diseases:
                                     mistakes in “assembly line” going unnoticed? Nitte University Journal of Health Science
                                 </li>
-                                <li>
+                                <li class="mr-btm-li">
                                     Henras A., Plisson-Chastang C., O&#39;Donohue M-F, <b>Anirban Chakraborty,</b> Gleizes
                                     P-E. 2014.
                                     An overview of pre-ribosomal RNA processing in eukaryotes. Wiley Interdisciplinary
                                     Reviews:
                                     RNA, 6: 225-242
                                 </li>
-                                <li>
+                                <li class="mr-btm-li">
                                     G. V. Yadav, <b>Anirban Chakraborty,</b> T. Uechi, and N. Kenmochi. 2014. Ribosomal
                                     protein
                                     deficiency causes Tp53-independent erythropoiesis failure in zebrafish. The
                                     International
                                     Journal of Biochemistry &amp; Cell Biology 49: 1-7.
                                 </li>
-                                <li>
+                                <li class="mr-btm-li">
                                     <b>Anirban Chakraborty</b> and N. Kenmochi. 2012. Ribosomes and Ribosomal Proteins: More
                                     than
                                     just ‘housekeeping’.  eLS. John Wiley and Sons Ltd,
                                     Chichester. <a href="http://www.els.net/WileyCDA/">http://www.els.net/</a> [DOI:
                                     10.1002/9780470015902.a0005055.pub2]
                                 </li>
-                                <li>
+                                <li class="mr-btm-li">
                                     S. Higa-Nakamine, T. Suzuki, T. Uechi, <b>Anirban Chakraborty,</b> Y. Nakajima, M.
                                     Nakamura, N.
                                     Hirano, T. Suzuki, and N. Kenmochi. 2012. Loss of ribosomal RNA modification causes
                                     developmental defects in zebrafish. Nucleic Acids Research 40:391-398.
                                 </li>
-                                <li>
+                                <li class="mr-btm-li">
                                     <b>Anirban Chakraborty,</b> T. Uechi, and N. Kenmochi. 2011. Guarding the Translation
                                     Apparatus:
                                     Defective Ribosome Biogenesis and the p53 Signaling pathway. Wiley Interdisciplinary
                                     Reviews: RNA, 2: 507-522.
                                 </li>
-                                <li>
+                                <li class="mr-btm-li">
                                     H. Torihara, T. Uechi, <b>Anirban Chakraborty,</b> M. Shinya, N. Sakai, and N. Kenmochi.
                                     2011.
                                     Erythropoiesis failure due to RPS19 deficiency is independent of an activated p53
                                     response in a
                                     zebrafish model of Diamond-Blackfan anaemia. British Journal of Hematology 152:648-654.
                                 </li>
-                                <li>
+                                <li class="mr-btm-li">
                                     <b>Anirban Chakraborty,</b> T. Uechi, S. Higa, H. Torihara and N. Kenmochi. 2009. Loss
                                     of
                                     ribosomal protein L11 affects zebrafish embryonic development through a p53-dependent
                                     apoptotic response. PLoS ONE 4(1): e4152.
                                 </li>
-                                <li>
+                                <li class="mr-btm-li">
                                     T. Uechi, Y. Nakajima, <b>Anirban Chakraborty,</b> H. Torihara, S. Higa and N. Kenmochi.
                                     2008.
                                     Deficiency of ribosomal protein S19 during early embryogenesis leads to reduction of
                                     erythrocytes in a zebrafish model of Diamond-Blackfan anemia. Human Molecular
                                     Genetics 17:
                                     3204-3211.
-                                </li>
-                                <li>
+                                </li class="mr-btm-li">
+                                <li class="mr-btm-li">
                                     T. Uechi, Y. Nakajima, A. Nakao, H. Torihara, <b>Anirban Chakraborty,</b> K. Inoue, and
                                     N.
                                     Kenmochi 2006.  Ribosomal Protein Gene Knockdown Causes Developmental Defects in
@@ -361,11 +361,11 @@
                             <br>
                             <br>
                             <ul style="text-align: justify">
-                                <li>
+                                <li class="mr-btm-li">
                                     <b>Khanna-Gupta A,</> Berliner N. Vitamin B3 boosts neutrophil counts.
                                         Nat Med. 2009 Feb;15(2):139-41. doi: 10.1038/nm0209-139.PMID: 19197286
                                 </li>
-                                <li>
+                                <li class="mr-btm-li">
                                     Dutt S, Narla A, Lin K, Mullally A, Abayasekara N, Megerdichian C, Wilson FH, Currie T,
                                     <b>Khanna-Gupta A,</b> Berliner N, Kutok JL, Ebert BL. Haploinsufficiency for ribosomal
                                     protein
@@ -373,7 +373,7 @@
                                     <b>Blood</b> 2011,
                                     117(9):2567-76 <b>(Plenary Paper)</b>
                                 </li>
-                                <li>
+                                <li class="mr-btm-li">
                                     Payne E, Virgilio M, Narla A, Sun H, Levine M, Paw BH, Look AT, Ebert B,
                                     <b>Khanna-Gupta, A</b>
                                     Treatment of L-Leucine in both in vivo and in vitro models of ribosomopathies (Diamond
@@ -381,29 +381,29 @@
                                     and
                                     developmental defects: evidence for a common pathway. 2012. <b>Blood.</b> 120, 2214-24
                                 </li>
-                                <li>
+                                <li class="mr-btm-li">
                                     Narla, A, Abayasekara N, Payne E, Hurst SL, Look AT, Berliner N, Ebert BL,
                                     <b>Khanna-Gupta, A.</b>
                                     L-Leucine improves the anemia of Diamond Blackfan Anemia and 5q- syndrome in a p53-
                                     independent way. 2014. <b>Br. J Haematol.</b> 2014
                                 </li>
-                                <li>
+                                <li class="mr-btm-li">
                                     Abayasekara S and <b>Khanna-Gupta,</b> A Translation Control in Myeloid Disease. In
                                     Lawrie CH
                                     (ed) Hematology- Science and Practice. 2012. ISBN 979-953-307-516-6 30.
                                 </li>
-                                <li>
+                                <li class="mr-btm-li">
                                     <b>Khanna-Gupta, A.</b> Bone Marrow failure syndromes: the Ribosomopahies. Journal of
                                     Bone
                                     Marrow Research. 2013. 1: 106 2013. 31.
                                 </li>
-                                <li>
+                                <li class="mr-btm-li">
                                     Narla, A, Abayasekara N, Payne E, Hurst SL, Look AT, Berliner N, Ebert BL,
                                     <b>Khanna-Gupta, A.</b>
                                     L-Leucine improves the anemia of Diamond Blackfan Anemia and 5q- syndrome in a p53-
                                     independent way. 2014. <b>Br. J Haematol.</b> 2014
                                 </li>
-                                <li>
+                                <li class="mr-btm-li">
                                     Shalini H Kumar, Kalpana A, Manikandan Suraj, Mary Shoba Das C, Aparna M, Divya J, Jaicy
                                     A, Priya K, Ragav Krishna, <b>Arati Khanna-Gupta</b> and Lakshmi BR Comprehensive
                                     genetic
