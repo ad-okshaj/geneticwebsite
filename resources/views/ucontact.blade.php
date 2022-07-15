@@ -15,13 +15,13 @@
     </div>
 
 
-    <div class="container">
-        <h2 class="mt-4" style="color: gray;padding-bottom: 1em;">Contact Us</h2>
+    <div class="container mb-5">
+        <h2 class="mt-5 px-4 ml-5" style="color: gray;padding-bottom: 1em;">Contact Us</h2>
         <div class="row">
             <div class="col-md-4">
                 <div class="card bg-light">
                     <div class="card-body">
-                        <h5>Anirban Chakraborty, PhD<p>
+                        <h5>Dr. Anirban Chakraborty, PhD<p>
                         </h5>
                         <h6>
                             <p> Deputy Director</p>
@@ -38,7 +38,7 @@
                 <div class="card bg-light">
                     <div class="card-body">
                         <h5>
-                            <p>Arati Khanna-Gupta, PhD </p>
+                            <p>Dr. Aarti Khanna-Gupta, PhD </p>
                         </h5>
                         <h6>
                             <p>Consultant in Precision Medicine<br>
