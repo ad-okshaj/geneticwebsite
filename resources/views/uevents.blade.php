@@ -72,7 +72,7 @@
     </div>
 @endsection
 
-@section('userscript')
+{{-- @section('userscript')
     <script>
         var maxHeight = 0;
 
@@ -84,4 +84,4 @@
 
         $(".event-card").height(maxHeight - 10);
     </script>
-@endsection
+@endsection --}}

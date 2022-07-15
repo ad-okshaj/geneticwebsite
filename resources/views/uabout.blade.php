@@ -17,7 +17,7 @@ height : 60vh;">
     <!--main-->
     <section>
         <div id="about">
-            <h2 class="text-center  fadeInUp" style="color:teal;animation-delay:">
+            <h2 class="text-center offset-2 fadeInUp" style="color:teal;animation-delay:">
                 About Us</h2>
         </div>
         <div class="container">

@@ -66,10 +66,6 @@
                     <a href="{{ url('/member_registration') }}"
                         class="btn btn-raised btn-danger text-center btn-center">Register</a>
                 </div>
-
-
-
-
             </div>
         </div>
     </div>

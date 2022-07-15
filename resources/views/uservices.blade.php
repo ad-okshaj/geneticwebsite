@@ -10,7 +10,7 @@
     </style>
     <!--parallax-->
     <div
-        style="  background: url(/images/services.jpg);
+        style="background: url(/images/services.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -21,14 +21,15 @@
     opacity: 0.6;">
         <div class="caption">
             <span class="border"
-                style="background-color:transparent;font-size:25px;color: black;font-weight: bold">RESEARCH</span>
+                style="background-color:transparent;font-size:25px;color: black; font-weight:bold">RESEARCH</span>
         </div>
     </div>
 
     <!--main-->
     <section>
         <div id="about">
-            <h2 class="text-center animated fadeInUp" style="color: teal;animation-delay: 1s">Research: Present &amp; Past
+            <h2 class="text-center animated fadeInUp mt-3" style="color: teal;animation-delay: 1s">Research: Present &amp;
+                Past
             </h2>
         </div>
         <div class="">
