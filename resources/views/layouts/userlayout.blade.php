@@ -77,7 +77,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand " href="userhome">
-            <img src="{{ asset('images/logo.png') }}" width="210" height="90" alt="">
+            <img src="{{ asset('images/logo.png') }}" width="210" height="80" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -117,7 +117,7 @@
                 </li>
             </ul>
 
-            <button type="button" class="btn btn-raised btn-danger text-center" data-toggle="modal"
+            <button type="button" class="btn btn-raised btn-danger text-center mx-5" data-toggle="modal"
                 data-target="#joinus">
                 JOIN US
             </button>
