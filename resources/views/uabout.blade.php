@@ -17,7 +17,8 @@ height : 60vh;">
     <!--main-->
     <section>
         <div id="about">
-            <h2 class="text-center animated fadeInUp" style="color:teal;animation-delay:">About Us</h2>
+            <h2 class="text-center  fadeInUp" style="color:teal;animation-delay:">
+                About Us</h2>
         </div>
         <div class="container">
             <div class="row">
@@ -362,7 +363,7 @@ height : 60vh;">
                             <div class="card" style="min-height:350px;width:200px;">
                                 <img class="card-img-top rounded" src="/download/{{ $member->photo }}"
                                     alt="Card image cap" style="height:220px">
-                                <h5 class="text-center">{{ $member->name }}</h5>
+                                <h5 class="text-center pt-4">{{ $member->name }}</h5>
                                 <p class="text-center">{{ $member->position }}</p>
                                 <div class="text-center">
                                     <button type="button" class="btn btn-primary" data-toggle="modal"
@@ -374,7 +375,7 @@ height : 60vh;">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h4 class=" text-center"><b>{{ $member->name }}</b>
+                                                <h4 class=" text-center pt-4"><b>{{ $member->name }}</b>
                                                 </h4>
                                                 <button type="button" class="close" data-dismiss="modal"
                                                     aria-label="Close">
@@ -424,7 +425,7 @@ height : 60vh;">
                             <div class="card" style="min-height:350px;width:200px;">
                                 <img class="card-img-top rounded" src="/download/{{ $member->photo }}"
                                     alt="Card image cap" style="height:220px">
-                                <h5 class="text-center">{{ $member->name }}</h5>
+                                <h5 class="text-center pt-4">{{ $member->name }}</h5>
                                 <p class="text-center">{{ $member->position }}</p>
                                 <div class="text-center">
                                     <button type="button" class="btn btn-primary" data-toggle="modal"
@@ -436,7 +437,8 @@ height : 60vh;">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h4 class="text-center" style="color:darkblue"><b>{{ $member->name }}</b>
+                                                <h4 class="text-center" style="color:darkblue">
+                                                    <b>{{ $member->name }}</b>
                                                 </h4>
                                                 <button type="button" class="close" data-dismiss="modal"
                                                     aria-label="Close">
@@ -484,7 +486,7 @@ height : 60vh;">
                             <div class="card " style="min-height:350px;width:200px;">
                                 <img class="card-img-top rounded" src="/download/{{ $member->photo }}"
                                     alt="Card image cap" style="height:220px">
-                                <h5 class="text-center">{{ $member->name }}</h5>
+                                <h5 class="text-center pt-4">{{ $member->name }}</h5>
                                 <p class="text-center">{{ $member->position }}</p>
                                 <div class="text-center">
                                     <button type="button" class="btn btn-primary" data-toggle="modal"

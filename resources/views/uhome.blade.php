@@ -194,8 +194,9 @@ min-height : 70vh;"
                 </div>
                 <div class="col col-md-4">
 
-                    <iframe class=" youtube" src="https://www.youtube.com/embed/GbgOsCOcV6g" frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    <iframe class="youtube" width="400" height="200" src="https://www.youtube.com/embed/GbgOsCOcV6g"
+                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
                     </iframe>
 
                 </div>
@@ -203,7 +204,8 @@ min-height : 70vh;"
             <div class="row">
                 <div class="col-md-6">
                     <div class="card" data-aos="flip-up" style="animation-delay: 3s;">
-                        <h2 class="text-center" data-aos="fade-up" style="color:teal">Vision</h2>
+                        <h2 class="text-center" data-aos="fade-up" style="color:teal">Vision
+                        </h2>
                         <div class="card-body">
                             <p style="color:gray;text-align:justify">
                                 To build a collaborative network of health care providers and scientists to decode the

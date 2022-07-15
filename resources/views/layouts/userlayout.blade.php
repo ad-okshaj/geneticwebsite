@@ -68,8 +68,8 @@
 
 
             </ul>
-            <a class="nav-link text-white " href="{{ url('/supportus') }}"> SUPPORT US</a>
-            <a class="nav-link text-white " href="{{ url('/donate_form') }}">DONATE</a>
+            <a class="nav-link text-white" href="{{ url('/supportus') }}"> SUPPORT US</a>
+            <a class="nav-link text-white" href="{{ url('/donate_form') }}">DONATE</a>
         </div>
     </nav>
 
@@ -77,7 +77,8 @@
 
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand " href="userhome">
-            <img src="{{ asset('images/logo.png') }}" width="210" height="90" alt="">
+            <img style="margin-bottom: 25px;" src="{{ asset('images/logo.png') }}" width="210" height="90"
+                alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -116,8 +117,8 @@
                     <a class="nav-link font-weight-bold" href="{{ url('contact') }}">contact Us</a>
                 </li>
             </ul>
-            <button type="button" class="btn btn-raised btn-danger text-center" data-toggle="modal"
-                data-target="#joinus">
+            <button type="button" style="margin-right:45px;" class="btn btn-raised btn-danger text-center"
+                data-toggle="modal" data-target="#joinus">
                 JOIN US
             </button>
 
@@ -168,8 +169,9 @@
                 <div class="row">
 
                     <div class="col-md-3 col-sm-6 ">
-                        <a class="navbar-brand " href="userhome">
-                            <img src="{{ asset('images/logo.png') }}" width="210" height="90" alt="">
+                        <a class="navbar-brand mb-2" href="userhome">
+                            <img src="{{ asset('images/logo.png') }}" width="210" height="90"
+                                alt="">
                         </a>
                         <p class="text-white">
                             Bringing together clinicians and researchers under one platform to
@@ -187,7 +189,8 @@
                         <p class="text-white"><br><br>
                         <h5 class="text-white">About Us</h5>
 
-                        <a style="color:grey" class="anchor" href="{{ url(asset('/userabout')) }}">Nitte-DU</a><br>
+                        <a style="color:grey" class="anchor"
+                            href="{{ url(asset('/userabout')) }}">Nitte-DU</a><br>
                         <a style="color:grey" class="anchor"
                             href="{{ url(asset('/userpartners')) }}">Partners</a><br>
                         <a style="color:grey" class="anchor"
@@ -204,7 +207,8 @@
                         <a style="color:grey" class="anchor" href="{{ url(asset('/userrgd')) }}">RGD</a><br>
                         <a style="color:grey" class="anchor" href="{{ url(asset('/userrgd')) }}">BMFS</a><br>
                         <a style="color:grey" class="anchor" href="{{ url(asset('/userevents')) }}">Events</a><br>
-                        <a style="color:grey" class="anchor" href="{{ url(asset('/usergallery')) }}">Gallery</a><br>
+                        <a style="color:grey" class="anchor"
+                            href="{{ url(asset('/usergallery')) }}">Gallery</a><br>
 
                         </p>
 
