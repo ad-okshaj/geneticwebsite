@@ -171,7 +171,7 @@
 
                     <div class="col-md-3 col-sm-6 ">
                         <a class="navbar-brand mb-2" href="userhome">
-                            <img src="{{ asset('images/logo.png') }}" width="210" height="90"
+                            <img src="{{ asset('images/logo.png') }}" width="210" height="100"
                                 alt="">
                         </a>
                         <p class="text-white">
