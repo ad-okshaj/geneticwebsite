@@ -1,36 +1,36 @@
 <?php
 
-
 namespace App\Http\Controllers;
 
-use App\Models\EventImage;
-use App\Models\Events;
-use App\Models\Gallery;
+use Throwable;
 use Carbon\Carbon;
-use App\Models\User;
-use Illuminate\Validation\Rule;
-use Illuminate\Support\Facades\Cache;
-use App\Exports\MembersExport;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Mail;
-use Maatwebsite\Excel\Facades\Excel;
-use Illuminate\Support\Facades\Storage;
-use App\Http\Requests\AddEvent;
-use App\Http\Requests\AddGallery;
-use App\Http\Requests\addmember;
-use App\Http\Requests\addnews;
-use App\Http\Requests\addteam;
-use App\Http\Requests\AddTestimonial;
-use App\Http\Requests\MemberEmailRequest;
-use App\Mail\MemberEmail;
-use App\Mail\MemberRegistered;
-
-use App\Models\Members;
 use App\Models\News;
 use App\Models\Team;
-use App\Models\Testimonial;
+use App\Models\User;
 use App\Models\Donate;
+use App\Models\Events;
+use App\Models\Gallery;
+use App\Models\Members;
+use App\Mail\MemberEmail;
+use App\Models\EventImage;
+use App\Models\Testimonial;
+use Illuminate\Http\Request;
+use App\Exports\MembersExport;
+use App\Http\Requests\addnews;
+use App\Http\Requests\addteam;
+use App\Mail\MemberRegistered;
+use App\Http\Requests\AddEvent;
+use Illuminate\Validation\Rule;
+use App\Http\Requests\addmember;
+use App\Http\Requests\AddGallery;
+use Illuminate\Support\Facades\Log;
+
+use Illuminate\Support\Facades\Mail;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Http\Requests\AddTestimonial;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Storage;
+use App\Http\Requests\MemberEmailRequest;
 
 
 class AdminController extends Controller
@@ -39,6 +39,9 @@ class AdminController extends Controller
     // {
     //     return Excel::download(new MembersExport, 'users.xlsx');
     // }
+    public function test(Request $request){
+        return redirect('/test')->flash('alert', 'User created successfully!');
+    }
     public function news(addnews $req)
     {
         $data = $req->validated();
@@ -47,7 +50,7 @@ class AdminController extends Controller
         }
         $rep = News::create($data);
 
-        return redirect('/dashboard')->with('alert', 'News added successfully !');
+        return redirect('/dashboard')->flash('alert', 'News added successfully !');
     }
 
     public function testimonial()
@@ -90,8 +93,6 @@ class AdminController extends Controller
         return view('admindonors', compact('res'));
     }
 
- 
-
     public function addtestimonial(AddTestimonial $req)
     {
         $data = $req->validated();
@@ -131,7 +132,7 @@ class AdminController extends Controller
         $data = $req->validated();
         $data['galleryimage'] = substr(Storage::putFile('crgbmd-uploads', $req->file('galleryimage'), 'public'), 15);
         $rep = gallery::create($data);
-        return redirect('/dashboard')->with('alert', 'Added to gallery successfully !');
+        return redirect('/dashboard')->with('alert', 'Added to gallery successfully!');
     }
     
     public function displayteam()
@@ -162,134 +163,134 @@ class AdminController extends Controller
         return view('manageevents', compact('res'));
     }
 
-    // public function delete($id, Request $request)
-    // {
-    //     $x = team::findOrFail($id);
-    //     // if ($x->image!=null) {
-    //     //     unlink(public_path().'/uploads/images/'.$x->image);
-    //     // }
-    //     $delete = team::where('id', '=', $id)->delete();
-    //     if ($delete == true) {
-    //         $request->session()->flash('status', 'success');
-    //         $request->session()->flash('message', 'Deleted Successfully !');
-    //     } else {
-    //         $request->session()->flash('status', 'danger');
-    //         $request->session()->flash('message', 'An error occurred !');
-    //     }
-    //     return back();
-    // }
-    // public function deletetestimonial($id, Request $request)
-    // {
+    public function delete($id, Request $request)
+    {
+        $x = team::findOrFail($id);
+        // if ($x->image!=null) {
+        //     unlink(public_path().'/uploads/images/'.$x->image);
+        // }
+        $delete = team::where('id', '=', $id)->delete();
+        if ($delete == true) {
+            $request->session()->flash('status', 'success');
+            $request->session()->flash('message', 'Deleted Successfully !');
+        } else {
+            $request->session()->flash('status', 'danger');
+            $request->session()->flash('message', 'An error occurred !');
+        }
+        return back();
+    }
+    public function deletetestimonial($id, Request $request)
+    {
 
-    //     $x = testimonial::findOrFail($id);
-    //     // if ($x->image!=null) {
-    //     //     unlink(public_path().'/uploads/images/'.$x->image);
-    //     // }
-    //     $delete = testimonial::where('id', '=', $id)->delete();
-    //     if ($delete == true) {
-    //         $request->session()->flash('status', 'success');
-    //         $request->session()->flash('message', 'Testimonial deleted successfully !');
-    //     } else {
-    //         $request->session()->flash('status', 'danger');
-    //         $request->session()->flash('message', 'An error occurred !');
-    //     }
-    //     return back();
-    // }
-    // public function deletenews($id, Request $request)
-    // {
-    //     $x = news::findOrFail($id);
-    //     // if ($x->image!=null) {
-    //     //     unlink(public_path().'/uploads/images/'.$x->image);
-    //     // }
-    //     $delete = news::where('id', '=', $id)->delete();
-    //     if ($delete == true) {
-    //         $request->session()->flash('status', 'success');
-    //         $request->session()->flash('message', 'News deleted successfully !');
-    //     } else {
-    //         $request->session()->flash('status', 'danger');
-    //         $request->session()->flash('message', 'An error occurred !');
-    //     }
-    //     return back();
-    // }
-    // public function deleteevents($id, Request $request)
-    // {
-    //     $x = events::findOrFail($id);
-    //     $delete = events::where('id', '=', $id)->delete();
-    //     if ($delete == true) {
-    //         $request->session()->flash('status', 'success');
-    //         $request->session()->flash('message', 'Event deleted successfully !');
-    //     } else {
-    //         $request->session()->flash('status', 'danger');
-    //         $request->session()->flash('message', 'An error occurred');
-    //     }
-    //     return back();
-    // }
-    // public function deletegalleryimage($id, Request $request)
-    // {
-    //     $x = gallery::findOrFail($id);
-    //     $delete = gallery::where('id', '=', $id)->delete();
-    //     if ($delete == true) {
-    //         $request->session()->flash('status', 'success');
-    //         $request->session()->flash('message', 'Deleted successfully !');
-    //     } else {
-    //         $request->session()->flash('status', 'danger');
-    //         $request->session()->flash('message', 'An error occurred');
-    //     }
-    //     return back();
-    // }
-    // public function deleteMember(members $member, Request $request)
-    // {
-    //     $delete = $member->delete();
-    //     if ($delete) {
-    //         $request->session()->flash('status', 'success');
-    //         $request->session()->flash('message', 'Member deleted successfully !');
-    //     } else {
+        $x = testimonial::findOrFail($id);
+        // if ($x->image!=null) {
+        //     unlink(public_path().'/uploads/images/'.$x->image);
+        // }
+        $delete = testimonial::where('id', '=', $id)->delete();
+        if ($delete == true) {
+            $request->session()->flash('status', 'success');
+            $request->session()->flash('message', 'Testimonial deleted successfully !');
+        } else {
+            $request->session()->flash('status', 'danger');
+            $request->session()->flash('message', 'An error occurred !');
+        }
+        return back();
+    }
+    public function deletenews($id, Request $request)
+    {
+        $x = news::findOrFail($id);
+        // if ($x->image!=null) {
+        //     unlink(public_path().'/uploads/images/'.$x->image);
+        // }
+        $delete = news::where('id', '=', $id)->delete();
+        if ($delete == true) {
+            $request->session()->flash('status', 'success');
+            $request->session()->flash('message', 'News deleted successfully !');
+        } else {
+            $request->session()->flash('status', 'danger');
+            $request->session()->flash('message', 'An error occurred !');
+        }
+        return back();
+    }
+    public function deleteevents($id, Request $request)
+    {
+        $x = events::findOrFail($id);
+        $delete = events::where('id', '=', $id)->delete();
+        if ($delete == true) {
+            $request->session()->flash('status', 'success');
+            $request->session()->flash('message', 'Event deleted successfully !');
+        } else {
+            $request->session()->flash('status', 'danger');
+            $request->session()->flash('message', 'An error occurred');
+        }
+        return back();
+    }
+    public function deletegalleryimage($id, Request $request)
+    {
+        $x = gallery::findOrFail($id);
+        $delete = gallery::where('id', '=', $id)->delete();
+        if ($delete == true) {
+            $request->session()->flash('status', 'success');
+            $request->session()->flash('message', 'Deleted Successfully!');
+        } else {
+            $request->session()->flash('status', 'danger');
+            $request->session()->flash('message', 'An error occurred!');
+        }
+        return back();
+    }
+    public function deleteMember(members $member, Request $request)
+    {
+        $delete = $member->delete();
+        if ($delete) {
+            $request->session()->flash('status', 'success');
+            $request->session()->flash('message', 'Member deleted successfully !');
+        } else {
 
-    //         $request->session()->flash('status', 'danger');
-    //         $request->session()->flash('message', 'An error occurred');
-    //     }
-    //     return back();
-    // }
-    // public function deleteDonor(Donate $donor, Request $request)
-    // {
-    //     $delete = $donor->delete();
-    //     if ($delete) {
-    //         $request->session()->flash('status', 'success');
-    //         $request->session()->flash('message', 'Donor deleted successfully !');
-    //     } else {
+            $request->session()->flash('status', 'danger');
+            $request->session()->flash('message', 'An error occurred');
+        }
+        return back();
+    }
+    public function deleteDonor(Donate $donor, Request $request)
+    {
+        $delete = $donor->delete();
+        if ($delete) {
+            $request->session()->flash('status', 'success');
+            $request->session()->flash('message', 'Donor deleted successfully !');
+        } else {
 
-    //         $request->session()->flash('status', 'danger');
-    //         $request->session()->flash('message', 'An error occurred');
-    //     }
-    //     return back();
-    // }
-    // public function deleteDonorMultiple(Request $request)
-    // {
-    //     $donors = $request->input('mul_delete');
-    //     $ids = explode(",", $donors);
-    //     $delete = Donate::whereIn('id', $ids)->delete();
-    //     if ($delete) {
-    //         $request->session()->flash('status', 'success');
-    //         $request->session()->flash('message', 'Donor deleted successfully !');
-    //     } else {
+            $request->session()->flash('status', 'danger');
+            $request->session()->flash('message', 'An error occurred');
+        }
+        return back();
+    }
+    public function deleteDonorMultiple(Request $request)
+    {
+        $donors = $request->input('mul_delete');
+        $ids = explode(",", $donors);
+        $delete = Donate::whereIn('id', $ids)->delete();
+        if ($delete) {
+            $request->session()->flash('status', 'success');
+            $request->session()->flash('message', 'Donor deleted successfully !');
+        } else {
 
-    //         $request->session()->flash('status', 'danger');
-    //         $request->session()->flash('message', 'An error occurred');
-    //     }
-    //     return back();
-    // }
-    // public function sendEmailToMember(members $member, MemberEmailRequest $request)
-    // {
-    //     $data = $request->validated();
-    //     try {
-    //         Mail::to($member->email)->send(new MemberEmail($data['custommessage']));
-    //         $request->session()->flash('status', 'success');
-    //         $request->session()->flash('message', 'Email sent successfully !');
-    //     } catch (\Exception $e) {
-    //         Log::error($e);
-    //         $request->session()->flash('status', 'danger');
-    //         $request->session()->flash('message', 'An error occurred');
-    //     }
-    //     return back();
-    // }
+            $request->session()->flash('status', 'danger');
+            $request->session()->flash('message', 'An error occurred');
+        }
+        return back();
+    }
+    public function sendEmailToMember(members $member, MemberEmailRequest $request)
+    {
+        $data = $request->validated();
+        try {
+            Mail::to($member->email)->send(new MemberEmail($data['custommessage']));
+            $request->session()->flash('status', 'success');
+            $request->session()->flash('message', 'Email sent successfully !');
+        } catch (\Exception $e) {
+            Log::error($e);
+            $request->session()->with('status', 'danger');
+            $request->session()->with('message', 'An error occurred');
+        }
+        return back();
+    }
 }

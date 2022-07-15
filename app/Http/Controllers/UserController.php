@@ -35,7 +35,7 @@ class UserController extends Controller
             $user = User::create($formFields);
             // Login
             // auth()->login($user);
-            return redirect('/admin')->with('message', 'User created!');
+            return redirect('/admin')->with('alert', 'User created successfully!');
         }   
         }
 
