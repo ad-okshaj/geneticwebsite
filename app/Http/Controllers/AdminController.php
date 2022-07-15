@@ -50,7 +50,7 @@ class AdminController extends Controller
         }
         $rep = News::create($data);
 
-        return redirect('/dashboard')->flash('alert', 'News added successfully !');
+        return redirect('/dashboard')->flash('alert', 'News added sucessfully!');
     }
 
     public function testimonial()
@@ -67,7 +67,7 @@ class AdminController extends Controller
                 EventImage::create(['image' => substr(Storage::putFile('crgbmd-uploads', $image, 'public'), 15), 'event_id' => $rep->id]);
             }
         }
-        return redirect('/dashboard')->with('alert', 'Event added successfully !');
+        return redirect('/dashboard')->with('alert', 'Event added sucessfully!');
     }
 
     public function member(addmember $req)
@@ -98,14 +98,14 @@ class AdminController extends Controller
         $data = $req->validated();
         $data['timage'] = substr(Storage::putFile('crgbmd-uploads', $req->file('timage'), 'public'), 15);
         $rep = testimonial::create($data);
-        return redirect('/dashboard')->with('alert', 'Testimonial added successfully !');
+        return redirect('/dashboard')->with('alert', 'Testimonial added sucessfully!');
     }
     public function team(addteam $req)
     {
         $data = $req->validated();
         $data['photo'] = substr(Storage::putFile('crgbmd-uploads', $req->file('photo'), 'public'), 15);
         $rep = team::create($data);
-        return redirect('/dashboard')->with('alert', 'Member added successfully !');
+        return redirect('/dashboard')->with('alert', 'Member added sucessfully!');
     }
 
     public function editTeam($id)
@@ -119,7 +119,7 @@ class AdminController extends Controller
         $data = $req->validated();
         $data['photo'] = substr(Storage::putFile('crgbmd-uploads', $req->file('photo'), 'public'), 15);
         $id->update($data);
-        return redirect('/dashboard')->with('alert', 'Member updated successfully !');
+        return redirect('/dashboard')->with('alert', 'Member updated sucessfully!');
     }
 
     public function addgallery()
@@ -172,7 +172,7 @@ class AdminController extends Controller
         $delete = team::where('id', '=', $id)->delete();
         if ($delete == true) {
             $request->session()->flash('status', 'success');
-            $request->session()->flash('message', 'Deleted Successfully !');
+            $request->session()->flash('message', 'Deleted sucessfully!');
         } else {
             $request->session()->flash('status', 'danger');
             $request->session()->flash('message', 'An error occurred !');
@@ -189,7 +189,7 @@ class AdminController extends Controller
         $delete = testimonial::where('id', '=', $id)->delete();
         if ($delete == true) {
             $request->session()->flash('status', 'success');
-            $request->session()->flash('message', 'Testimonial deleted successfully !');
+            $request->session()->flash('message', 'Testimonial deleted successfully!');
         } else {
             $request->session()->flash('status', 'danger');
             $request->session()->flash('message', 'An error occurred !');
@@ -205,7 +205,7 @@ class AdminController extends Controller
         $delete = news::where('id', '=', $id)->delete();
         if ($delete == true) {
             $request->session()->flash('status', 'success');
-            $request->session()->flash('message', 'News deleted successfully !');
+            $request->session()->flash('message', 'News deleted sucessfully!');
         } else {
             $request->session()->flash('status', 'danger');
             $request->session()->flash('message', 'An error occurred !');
@@ -218,7 +218,7 @@ class AdminController extends Controller
         $delete = events::where('id', '=', $id)->delete();
         if ($delete == true) {
             $request->session()->flash('status', 'success');
-            $request->session()->flash('message', 'Event deleted successfully !');
+            $request->session()->flash('message', 'Event deleted sucessfully!');
         } else {
             $request->session()->flash('status', 'danger');
             $request->session()->flash('message', 'An error occurred');
@@ -243,7 +243,7 @@ class AdminController extends Controller
         $delete = $member->delete();
         if ($delete) {
             $request->session()->flash('status', 'success');
-            $request->session()->flash('message', 'Member deleted successfully !');
+            $request->session()->flash('message', 'Member deleted sucessfully!');
         } else {
 
             $request->session()->flash('status', 'danger');
@@ -256,7 +256,7 @@ class AdminController extends Controller
         $delete = $donor->delete();
         if ($delete) {
             $request->session()->flash('status', 'success');
-            $request->session()->flash('message', 'Donor deleted successfully !');
+            $request->session()->flash('message', 'Donor deleted sucessfully!');
         } else {
 
             $request->session()->flash('status', 'danger');
@@ -271,7 +271,7 @@ class AdminController extends Controller
         $delete = Donate::whereIn('id', $ids)->delete();
         if ($delete) {
             $request->session()->flash('status', 'success');
-            $request->session()->flash('message', 'Donor deleted successfully !');
+            $request->session()->flash('message', 'Donor deleted sucessfully!');
         } else {
 
             $request->session()->flash('status', 'danger');
@@ -285,7 +285,7 @@ class AdminController extends Controller
         try {
             Mail::to($member->email)->send(new MemberEmail($data['custommessage']));
             $request->session()->flash('status', 'success');
-            $request->session()->flash('message', 'Email sent successfully !');
+            $request->session()->flash('message', 'Email sent sucessfully!');
         } catch (\Exception $e) {
             Log::error($e);
             $request->session()->with('status', 'danger');
