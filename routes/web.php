@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
@@ -7,7 +6,6 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DonateController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,7 +18,9 @@ use App\Http\Controllers\DonateController;
 
 Route::get('/', );
 */
-
+Route::get('/member_registration', function () {
+    return view('registermemberr');
+});
 Route::get('/admin', function () {
     return redirect('/dashboard');
 });
@@ -37,9 +37,7 @@ Route::get('/addevents', function () {
 Route::get('/adminnews', function () {
     return view('addnews1');
 });
-Route::get('/member_registration', function () {
-    return view('registermember');
-});
+
 Route::get('/addteam', function () {
     return view('addteam');
 });
@@ -66,12 +64,11 @@ Route::get('/supportus', function () {
 // Route::get('/register', [UserController::class, 'register'])->name('register');
 // Route::post('/users', [UserController::class, 'store']);
 
-
-
 Route::controller(HomeController::class)->group(function(){
     Route::get('/dashboard','index')->middleware('auth');
     Route::get('/','redirectToUhome');
     Route::get('/userservices','uservices');
+    Route::get('/userabout', 'userabout');
 });
 
 Route::controller(UserController::class)->group(function(){
@@ -83,7 +80,6 @@ Route::controller(UserController::class)->group(function(){
 });
 
 Route::controller(DonateController::class)->group(function(){
-    Route::get('/userevents','userevents');
     Route::resource('/donate_form', DonateController::class);
     Route::get('thankyou/{id}','store');
 });
@@ -107,10 +103,6 @@ Route::controller(AdminController::class)->group(function(){
     Route::post('/deleteDonorMultiple',  'deleteDonorMultiple');
 });
 
-
-
-
-
 // Route::get('/export', [AdminController::class, 'export']);
 
 
@@ -130,12 +122,7 @@ Route::controller(AdminController::class)->group(function(){
 
 // Route::get('/userhome', 'UserController@home'); ----> redundant route
 // Route::get('/displaytestimonial', 'UserController@displaytestimonial'); ---> probably mistake in coding
-// Route::get('/userabout', function () {
-//     $sc = team::where('committe', 'scientific')->get();
-//     $ad = team::where('committe', 'advisory')->get();
-//     $mg = team::where('committe', 'managing')->get();
-//     return view('uabout')->with(['sc' => $sc, 'ad' => $ad, 'mg' => $mg]);
-// });
+
 
 
 // Auth::routes(['verify' => false, 'register' => false]);

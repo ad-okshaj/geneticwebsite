@@ -113,6 +113,24 @@ min-height : 70vh;"
             <img src="{{ url('/images/logo5.png') }}" class="img-fluid" alt="Responsive Image" width="85%" height="100%" />
         </div>
 
+
+
+        {{-- <div class="text-block animated fadeIn" style=" position: absolute;
+        bottom: 20px;
+        right: 20px;
+        background: rgba(0, 0,255, 0.4); 
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+        animation-delay:1s ">
+        <blockquote style="font-size:20px"><i>"Individually we are one drop,
+                together we are an ocean"</i>
+            <footer style="text-align:right;">
+                <i>-Ryunosuke
+                    Satoro</i></footer>
+        </blockquote>
+
+    </div> --}}
     </div>
 
 
@@ -212,12 +230,67 @@ min-height : 70vh;"
             </div>
         </div>
     </section>
+    {{-- <div style="margin-top:3rem;">
+    <h2 class="text-center myheader " style="color:teal;">News/Announcements</h2>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"
+        style="background-color:black !important;min-height:200px;padding-top:20px;">
 
+        <div class="carousel-inner">
+            @foreach ($news as $value)
+
+            <div class="carousel-item {{($loop->first)?'active':''}}">
+
+
+<div class="container">
+
+    <a class="text-white h3" {!! is_null($value->flyer)?
+        'href="'.asset('download/'.$value->flyer).'"':""!!}>
+        {{$value->newshead}}
+    </a>
+    <p class="lead text-white">
+        {{$value->description}}</p>
+    <p class=" text-white">
+        Dated : {{$value->newsdate}}</p>
+    <p class="card-text"><small class="text-muted">Last updated
+            {{ $value->updated_at->diffForHumans()  }}</small></p>
+</div>
+</div>
+@endforeach
+</div>
+<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+</a>
+</div>
+</div> --}}
     {{-- News section --}}
     <div class="container-fluid">
         <div class="row">
             <div class="col">
+                {{-- <div class="row justify-content-center ">
+                <h2 class="heading pl-3 " style="color:teal">
+                    Recognition/Accreditation
+                </h2>
+            </div>
+            <br><br>
+            <div class="row justify-content-center">
+                <br><br>
+                <div class="col ml-2 text-center">
 
+                    <a href="https://nitte.edu.in"><img class="card-img-top" src="{{asset('/images/nirf.jpg')}}"
+            alt="Card image cap" style="height:150px;width:150px;"></a>
+        </div>
+        <div class="col ml-2 text-center">
+            <a href="https://nitte.edu.in"><img class="card-img-top mt-3" src="{{asset('/images/qs.jpg')}}" alt="Card image cap" style="height:150px;width:150px"></a>
+        </div>
+        <div class="col ml-2 text-center">
+            <a href="https://nitte.edu.in"><img class="card-img-top mt-3" src="{{asset('/images/qsrank.jpeg')}}" alt="Card image cap" style="height:150px;width:150px"></a>
+        </div>
+    </div><br><br> --}}
                 <div class="row">
                     <div class="col">
                         <h2 class="heading pl-3 text-center" style="color:teal">
@@ -267,6 +340,66 @@ min-height : 70vh;"
         </div>
     </div>
     {{-- end of recent news section --}}
+
+
+
+
+    {{-- <div id="logo" class="carousel slide" data-interval="2000" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li style="text-decoration-color: darkblue !important" data-target="#logo" data-slide-to="0" class="active">
+        </li>
+        <li data-target="#logo" data-slide-to="1"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active animated fadeInRight">
+            <div class="jumbotron jumbotron-fluid" style="background-color:white !important">
+                <div class="container">
+                    <h2 class="text-center" style="color:teal">Supported By</h2><br>
+                    <div class="text-center">
+                        <a href="https://nitte.edu.in"><img class="card-img-top" src="{{asset('/images/nittedu1.png')}}"
+alt="Card image cap" style="height:100px;width:150px"></a>
+</div>
+</div>
+</div>
+</div>
+<div class="carousel-item animated fadeInRight">
+    <div class="jumbotron jumbotron-fluid" style="background-color:white !important">
+        <div class="container">
+            <h2 class="text-center" style="color:teal">Recognition/Accreditation</h2><br>
+            <div class="row">
+                <div class="col-md-3 offset-1">
+                    <a href="https://nitte.edu.in"><img class="card-img-top" src="{{asset('/images/nirf.jpg')}}" alt="Card image cap" style="height:150px;width:150px"></a>
+                </div>
+                <div class="col-md-3 offset-1">
+                    <a href="https://nitte.edu.in"><img class="card-img-top" src="{{asset('/images/qs.jpg')}}" alt="Card image cap" style="height:150px;width:150px"></a>
+                </div>
+                <div class="col-md-3 offset-1">
+                    <a href="https://nitte.edu.in"><img class="card-img-top" src="{{asset('/images/qsrank.jpeg')}}" alt="Card image cap" style="height:150px;width:150px"></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+<a class="carousel-control-prev" href="#logo" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next" href="#logo" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+</a>
+</div> --}}
+
+
+
+
+
+
+
+
+
 
     <div class="user_icons"
         style="background-image:url(/images/icons.jpg);
@@ -433,6 +566,18 @@ min-height : 70vh;"
                 moreText.style.display = "inline";
             }
         }
+
+        // var preloader = document.getElementById('loading');
+        //         function loadingFunction() {
+        //                         myVar = setTimeout(showPage, 1000);
+        //                     }
+
+        //                     function showPage() {
+        //                         preloader.style.opacity = 0;
+        //                         preloader.style.display = "none";
+
+        //                     }
+
         setTimeout(function() {
             let loader = document.querySelector(".loder");
             loader.className += " hidden";

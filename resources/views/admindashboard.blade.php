@@ -1,12 +1,3 @@
-{{-- @extends('layouts.adminlayout')
-@section('title')
-    CRGBMD INDIA | Dashboard
-@endsection
-
-@section('content2')
-    <h1>Admin Dashboard</h1>
-@endsection --}}
-
 @extends('layouts.adminlayout')
 @section('title')
     CRGBMD INDIA | Dashboard
@@ -60,4 +51,23 @@
                 </div>
             </div>
         </div><br>
-    @endsection
+
+
+        <!--progress bar-->
+        <!--    <div class="mt-4"></div>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                    the card's content.</p>
+            </div>
+        </div>
+
+    </div> -->
+
+    </div>
+    <!-- /#page-content-wrapper -->
+
+    </div>
+@endsection

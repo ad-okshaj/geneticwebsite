@@ -1,24 +1,3 @@
-{{-- <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/css/bootstrap-material-design.min.css">
-    <link rel="stylesheet" href="/css/animate.min.css">
-    <script src="https://use.fontawesome.com/7fa0c56c95.js"></script>
-    <base href="{{ url('/') }}" />
-    <link rel="canonical" href="/{{ Request::path() }}" />
-    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{ asset('css/mycss.css') }}">
-    <title> @yield('title')</title>
-</head>
-<body>
-    <h1>Admin layout</h1>
-    @yield('content2')
-</body>
-</html> --}}
-
 <html lang="en">
 
 <head>
@@ -51,7 +30,7 @@
                         class="fa fa-tachometer text-white" aria-hidden="true"></i><strong>Dashboard</strong></a>
                 <a href="/members" class="list-group-item list-group-item-action text-white"><i
                         class="fa fa-user text-white" aria-hidden="true"></i>Manage Users</a>
-                <a href="/donars" class="list-group-item list-group-item-action text-white"><i
+                <a href="/donors" class="list-group-item list-group-item-action text-white"><i
                         class="fa fa-user text-white" aria-hidden="true"></i>Manage Donors</a>
                 <a href="/addevents" class="list-group-item list-group-item-action text-white"><i
                         class="fa fa-calendar text-white" aria-hidden="true"></i> Add Events</a>

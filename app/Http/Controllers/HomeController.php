@@ -34,4 +34,11 @@ class HomeController extends Controller
     {
         return view('uservices');
     }
+    public function  userabout()
+    {
+        $sc = team::where('committe', 'scientific')->get();
+        $ad = team::where('committe', 'advisory')->get();
+        $mg = team::where('committe', 'managing')->get();
+        return view('uabout')->with(['sc' => $sc, 'ad' => $ad, 'mg' => $mg]);
+    }
 }

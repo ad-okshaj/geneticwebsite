@@ -3,5 +3,55 @@
     CRGBMD INDIA | Add News
 @endsection
 @section('content2')
-    <h1>Add News 1</h1>
+    <div class="container">
+        <h2 class="mt-4" style="color: gray;padding-bottom: 1em;">Add News</h2>
+
+        <div class="card">
+            <div class="card-body">
+                <form method="post" action="/addnewss" enctype="multipart/form-data">
+                    @csrf
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="newshead">News Name</label>
+                            <input type="text" class="form-control" id="newshead" required placeholder="News Name"
+                                name="newshead" value="{{ old('newshead') }}">
+                            @error('newshead')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="newsdate">News date</label>
+                            <input type="date" class="form-control" id="newsdate" required placeholder="News date"
+                                name="newsdate" value="{{ old('newsdate') }}">
+                            @error('newsdate')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="description">Description</label>
+                            <textarea class="form-control" id="inputEmail4" name="description" required placeholder="Description"
+                                value="{{ old('description') }}"></textarea>
+                            @error('description')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="flyer">Image</label>
+                            <input type="file" class="form-control-file" id="flyer" name="flyer">
+                            @error('flyer')
+                                <div class="alert alert-danger">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </div>
+
+                    </div>
+
+                    <div class="text-right">
+                        <button type="submit" class="btn btn-outline-success">Add News</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 @endsection
