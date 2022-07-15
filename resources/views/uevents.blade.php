@@ -12,7 +12,7 @@
                 <a class="nav-link" href="{{ url('usergallery') }}">GALLERY</a>
             </li>
         </ul>
-        <h2 class="text-center" style="padding:1em;color:teal">Events Conducted</h2>
+        <h2 class="text-center" style="padding: 1em 1em 1em 1.8em; color:teal">Events Conducted</h2>
         <div class="row" style="padding:1em">
 
             @foreach ($events as $event)
