@@ -18,16 +18,10 @@ class UserController extends Controller
     // public function login() {
     //     return view('');
     // }
-    // public function register() {
-    //     return view('users.register');
-    // }
-    // public function logout2(Request $request) {
-    //     auth()->logout();
-    //     $request->session()->invalidate();
-    //     $request->session()->regenerateToken();
-    //     return redirect('/logout2')->with('message', 'You have been logged out!');
-    // }
-    public function store(Request $request) {
+    public function showRegistrationForm() {
+        return view('auth.register');
+    }
+    public function register2(Request $request) {
         $formFields = $request->validate([
             'name' => ['required', 'min:3'],
             'email' => ['required', 'email', Rule::unique('users', 'email')],
@@ -38,9 +32,16 @@ class UserController extends Controller
         // Create User
         $user = User::create($formFields);
         // Login
-        auth()->login($user);
-        return redirect('/logout2')->with('message', 'User created and logged in');
+        // auth()->login($user);
+        return redirect('/admin')->flash('message', 'User created!');
     }
+    // public function logout2(Request $request) {
+    //     auth()->logout();
+    //     $request->session()->invalidate();
+    //     $request->session()->regenerateToken();
+    //     return redirect('/logout2')->with('message', 'You have been logged out!');
+    // }
+
     public function home()
     {
         $cnt3 = Cache::get('event_count', function () {
