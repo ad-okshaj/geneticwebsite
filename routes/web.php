@@ -122,7 +122,7 @@ Route::controller(AdminController::class)->group(function(){
 
 Auth::routes();
 Route::any( '/register', [UserController::class, 'showRegistrationForm'])->middleware('auth');
-Route::post('/register2', [UserController::class, 'register2'])->name('register');
+Route::post('/register2', [UserController::class, 'register2'])->middleware('auth');
 
 
 // Route::get('/register', [UserController::class, 'showRegistrationForm'])->name('register')->middleware('auth');
