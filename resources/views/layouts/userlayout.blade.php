@@ -77,8 +77,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand " href="userhome">
-            <img style="margin-bottom: 25px;" src="{{ asset('images/logo.png') }}" width="210" height="90"
-                alt="">
+            <img src="{{ asset('images/logo.png') }}" width="210" height="90" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -114,13 +113,15 @@
                         <a class="nav-link font-weight-bold" href="{{url('usergallery')}}">Gallery</a>
                     </li> --}}
                 <li class="nav-item active">
-                    <a class="nav-link font-weight-bold" href="{{ url('contact') }}">contact Us</a>
+                    <a class="nav-link font-weight-bold" href="{{ url('contact') }}">Contact Us</a>
                 </li>
             </ul>
-            <button type="button" style="margin-right:45px;" class="btn btn-raised btn-danger text-center"
-                data-toggle="modal" data-target="#joinus">
+
+            <button type="button" class="btn btn-raised btn-danger text-center" data-toggle="modal"
+                data-target="#joinus">
                 JOIN US
             </button>
+
 
         </div>
     </nav>

@@ -107,7 +107,7 @@ background-repeat: no-repeat;
 background-size: cover;
 background-position: center;
 width: 100%;
-min-height : 70vh;"
+min-height : 75vh;"
         align="center">
         <div class="img-container">
             <img src="{{ url('/images/logo5.png') }}" class="img-fluid" alt="Responsive Image" width="85%" height="100%" />
@@ -135,7 +135,7 @@ min-height : 70vh;"
 
 
     <section id="home">
-        <h2 class="text-center" style="color:navy">Consortium of Rare Genetic and Bone Marrow Disorders India
+        <h2 class="text-center mb-4" style="color:navy">Consortium of Rare Genetic and Bone Marrow Disorders India
             Network@NITTEDU (CRG.BMD|IN)</h2><br>
 
         <div>
@@ -411,7 +411,7 @@ alt="Card image cap" style="height:100px;width:150px"></a>
     background-position: center;
     position:relative;
     width: 100%;
-    min-height :400px;
+    min-height :350px;
     opacity: 0.9;">
         <div class="row icon" style="padding-top:6em; margin-left: 0px !important; margin-right: 0px !important;">
             <div class="col-md">
@@ -504,7 +504,7 @@ alt="Card image cap" style="height:100px;width:150px"></a>
     </section>
     <!--footer-->
 
-    <h2 class="text-center myheader " style="color:teal;">Testimonials</h2>
+    <h2 class="text-center mb-4 myheader " style="color:teal;">Testimonials</h2>
     <div id="carouselTest" class="carousel slide" data-ride="carousel"
         style="background-color:black !important;min-height:400px;padding-top:20px;">
         <div class="carousel-inner">
