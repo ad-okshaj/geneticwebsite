@@ -502,7 +502,7 @@ alt="Card image cap" style="height:100px;width:150px"></a>
             </div>
         </div>
     </section>
-    <!--footer-->
+
 
     <h2 class="text-center mb-4 myheader " style="color:teal;">Testimonials</h2>
     <div id="carouselTest" class="carousel slide" data-ride="carousel"
@@ -551,6 +551,8 @@ alt="Card image cap" style="height:100px;width:150px"></a>
         </a>
     </div>
 @endsection
+
+
 @section('userscript')
     <script>
         function myFunction() {
