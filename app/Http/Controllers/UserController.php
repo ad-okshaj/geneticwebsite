@@ -72,4 +72,10 @@ class UserController extends Controller
         });
     return view('/uevents')->with(['events' => $events]);
     }
+
+    public function login() {
+        return view('layouts.app');
+    }
+
+
 }

@@ -145,10 +145,6 @@
                     <a href="{{ url('/member_registration') }}"
                         class="btn btn-raised btn-danger text-center btn-center">Register</a>
                 </div>
-
-
-
-
             </div>
         </div>
     </div>
@@ -169,7 +165,8 @@
 
                     <div class="col-md-3 col-sm-6 ">
                         <a class="navbar-brand " href="userhome">
-                            <img src="{{ asset('images/logo.png') }}" width="210" height="90" alt="">
+                            <img src="{{ asset('images/logo.png') }}" width="210" height="90"
+                                alt="">
                         </a>
                         <p class="text-white">
                             Bringing together clinicians and researchers under one platform to
@@ -187,7 +184,8 @@
                         <p class="text-white"><br><br>
                         <h5 class="text-white">About Us</h5>
 
-                        <a style="color:grey" class="anchor" href="{{ url(asset('/userabout')) }}">Nitte-DU</a><br>
+                        <a style="color:grey" class="anchor"
+                            href="{{ url(asset('/userabout')) }}">Nitte-DU</a><br>
                         <a style="color:grey" class="anchor"
                             href="{{ url(asset('/userpartners')) }}">Partners</a><br>
                         <a style="color:grey" class="anchor"
@@ -204,7 +202,8 @@
                         <a style="color:grey" class="anchor" href="{{ url(asset('/userrgd')) }}">RGD</a><br>
                         <a style="color:grey" class="anchor" href="{{ url(asset('/userrgd')) }}">BMFS</a><br>
                         <a style="color:grey" class="anchor" href="{{ url(asset('/userevents')) }}">Events</a><br>
-                        <a style="color:grey" class="anchor" href="{{ url(asset('/usergallery')) }}">Gallery</a><br>
+                        <a style="color:grey" class="anchor"
+                            href="{{ url(asset('/usergallery')) }}">Gallery</a><br>
 
                         </p>
 
@@ -239,11 +238,6 @@
         </div>
 
     </div>
-
-
-
-
-
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 

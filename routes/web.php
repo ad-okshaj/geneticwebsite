@@ -7,7 +7,6 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DonateController;
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,16 +24,12 @@ Route::get('/admin', function () {
     return redirect('/dashboard');
 });
 
-Route::controller(HomeController::class)->group(function(){
-    Route::get('/dashboard','index')->middleware('auth');
-    Route::get('/','redirectToUhome');
-    Route::get('/userservices','uservices');
+Route::get('/download/{file}', function ($file) {
+    return Storage::download('crgbmd-uploads/' . $file);
 });
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
  
+//Route::view("about", '/about'); -------> new routing
+
 Route::get('/addevents', function () {
     return view('addevents');
 });
@@ -48,6 +43,30 @@ Route::get('/addteam', function () {
     return view('addteam');
 });
 
+Route::get('/userpartners', function () {
+    return view('upartners');
+});
+
+Route::get('/userresources', function () {
+    return view('uresources');
+});
+
+Route::get('/userrgd', function () {
+    return view('urgd');
+});
+
+Route::get('/supportus', function () {
+    return view('usupportus');
+}); 
+
+Route::get('/login', [UserController::class, 'login'])->name('login')->middleware('guest');
+
+
+Route::controller(HomeController::class)->group(function(){
+    Route::get('/dashboard','index')->middleware('auth');
+    Route::get('/','redirectToUhome');
+    Route::get('/userservices','uservices');
+});
 
 Route::controller(UserController::class)->group(function(){
     Route::get('/userevents','userevents');
@@ -112,29 +131,12 @@ Route::controller(AdminController::class)->group(function(){
 //     return view('uabout')->with(['sc' => $sc, 'ad' => $ad, 'mg' => $mg]);
 // });
 
-Route::get('/userpartners', function () {
-    return view('upartners');
-});
-
-Route::get('/userresources', function () {
-    return view('uresources');
-});
-
-Route::get('/userrgd', function () {
-    return view('urgd');
-});
-
-Route::get('/supportus', function () {
-    return view('usupportus');
-});
 
 // Auth::routes(['verify' => false, 'register' => false]);
 // Route::get('/register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 // Route::post('/register', 'Auth\RegisterController@register')->name('register');
 
 
-Route::get('/download/{file}', function ($file) {
-    return Storage::download('crgbmd-uploads/' . $file);
-});
- 
-
+// Route::get('/', function () {
+//     return view('welcome');
+// });
