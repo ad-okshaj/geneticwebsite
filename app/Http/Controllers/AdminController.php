@@ -56,16 +56,16 @@ class AdminController extends Controller
         return redirect('/dashboard')->with('alert', 'Event added successfully !');
     }
 
-    // public function member(addmember $req)
-    // {
-    //     $rep = members::create($req->validated());
-    //     try {
-    //         Mail::send(new MemberRegistered($rep));
-    //     } catch (\Exception $e) {
-    //         Log::emergency("Unable to send Emails");
-    //     }
-    //     return view('success_register_member');
-    // }
+    public function member(addmember $req)
+    {
+        $rep = members::create($req->validated());
+        try {
+            Mail::send(new MemberRegistered($rep));
+        } catch (\Exception $e) {
+            Log::emergency("Unable to send Emails");
+        }
+        return view('success_register_member');
+    }
 
     public function displaymembers()
     {

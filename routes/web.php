@@ -116,12 +116,14 @@ Route::controller(AdminController::class)->group(function(){
 });
 
 
+Auth::routes();
+Route::match(['get', 'post'], '/register', [UserController::class, 'registration'])->middleware('auth');
+
+
 // Auth::routes(['verify' => false, 'register' => false]);
 // Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
 // Route::post('/register', [RegisterController::class, 'register'])->name('register');
 
-Auth::routes();
-Route::match(['get', 'post'], '/register', [UserController::class, 'registration'])->middleware('auth');
 // Route::post('/register2', [UserController::class, 'register2']);
 
 
