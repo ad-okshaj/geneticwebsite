@@ -117,7 +117,7 @@ Route::controller(AdminController::class)->group(function(){
 
 
 Auth::routes();
-Route::match(['get', 'post'], '/register', [UserController::class, 'registration'])->middleware('auth');
+Route::match(['get', 'post'], '/register', [UserController::class, 'registration'])->name('register')->middleware('auth');
 
 
 // Auth::routes(['verify' => false, 'register' => false]);

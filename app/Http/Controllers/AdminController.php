@@ -1,10 +1,21 @@
 <?php
 
+
 namespace App\Http\Controllers;
 
 use App\Models\EventImage;
 use App\Models\Events;
 use App\Models\Gallery;
+use Carbon\Carbon;
+use App\Models\User;
+use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Cache;
+use App\Exports\MembersExport;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
+use Maatwebsite\Excel\Facades\Excel;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\AddEvent;
 use App\Http\Requests\AddGallery;
 use App\Http\Requests\addmember;
@@ -14,20 +25,20 @@ use App\Http\Requests\AddTestimonial;
 use App\Http\Requests\MemberEmailRequest;
 use App\Mail\MemberEmail;
 use App\Mail\MemberRegistered;
+
 use App\Models\Members;
 use App\Models\News;
 use App\Models\Team;
 use App\Models\Testimonial;
 use App\Models\Donate;
-use App\Exports\MembersExport;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Mail;
-use Maatwebsite\Excel\Facades\Excel;
-use Illuminate\Support\Facades\Storage;
+
 
 class AdminController extends Controller
 {
+    // public function export()
+    // {
+    //     return Excel::download(new MembersExport, 'users.xlsx');
+    // }
     public function news(addnews $req)
     {
         $data = $req->validated();
@@ -79,10 +90,7 @@ class AdminController extends Controller
         return view('admindonors', compact('res'));
     }
 
-    // public function export()
-    // {
-    //     return Excel::download(new MembersExport, 'users.xlsx');
-    // }
+ 
 
     public function addtestimonial(AddTestimonial $req)
     {
@@ -284,4 +292,4 @@ class AdminController extends Controller
     //     }
     //     return back();
     // }
-    }
+}
