@@ -43,7 +43,6 @@
     @yield('pre')
 
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#4e73df">
-
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -65,14 +64,11 @@
                         <i class="fa fa-envelope"></i>
                         arati1239@gmail.com</a>
                 </li>
-
-
             </ul>
             <a class="nav-link text-white" href="{{ url('/supportus') }}"> SUPPORT US</a>
             <a class="nav-link text-white" href="{{ url('/donate_form') }}">DONATE</a>
         </div>
     </nav>
-
 
 
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -83,7 +79,6 @@
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent1">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
@@ -121,10 +116,9 @@
                 data-target="#joinus">
                 JOIN US
             </button>
-
-
         </div>
     </nav>
+
     @yield('usercontent')
     <div class="modal fade" id="joinus" tabindex="-1" role="dialog" aria-labelledby="modalforjoinus"
         aria-hidden="true">

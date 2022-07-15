@@ -65,7 +65,6 @@
         </div> --}}
             <h6 class="text-center pt-4">Over the past 9 months, the CRG.BMD team has been involved with the following Rare
                 genetic disease studies. The results, when published, should shed light on these disease in the
-
                 Indian context</h6>
             <br>
             <ul class="nav nav-tabs mb-3 justify-content-center" id="pills-tab" role="tablist">
