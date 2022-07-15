@@ -121,8 +121,8 @@ Route::controller(AdminController::class)->group(function(){
 // Route::post('/register', [RegisterController::class, 'register'])->name('register');
 
 Auth::routes();
-Route::any( '/register', [UserController::class, 'showRegistrationForm'])->middleware('auth');
-Route::post('/register2', [UserController::class, 'register2'])->middleware('auth');
+Route::match(['get', 'post'], '/register', [UserController::class, 'registration'])->middleware('auth');
+// Route::post('/register2', [UserController::class, 'register2']);
 
 
 // Route::get('/register', [UserController::class, 'showRegistrationForm'])->name('register')->middleware('auth');

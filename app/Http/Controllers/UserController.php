@@ -18,23 +18,41 @@ class UserController extends Controller
     // public function login() {
     //     return view('');
     // }
-    public function showRegistrationForm() {
-        return view('auth.register');
-    }
-    public function register2(Request $request) {
-        $formFields = $request->validate([
-            'name' => ['required', 'min:3'],
-            'email' => ['required', 'email', Rule::unique('users', 'email')],
-            'password' => 'required|confirmed|min:6'
-        ]);
-        // Hash Password
-        $formFields['password'] = bcrypt($formFields['password']);
-        // Create User
-        $user = User::create($formFields);
-        // Login
-        // auth()->login($user);
-        return redirect('/admin')->with('message', 'User created!');
-    }
+    public function registration(Request $request) {
+        $method = $request->method();
+        if ($request->isMethod('get')) {
+            return view('auth.register');
+        }
+        if ($request->isMethod('post')) {
+            $formFields = $request->validate([
+                'name' => ['required', 'min:3'],
+                'email' => ['required', 'email', Rule::unique('users', 'email')],
+                'password' => 'required|confirmed|min:6'
+            ]);
+            // Hash Password
+            $formFields['password'] = bcrypt($formFields['password']);
+            // Create User
+            $user = User::create($formFields);
+            // Login
+            // auth()->login($user);
+            return redirect('/admin')->with('message', 'User created!');
+        }   
+        }
+
+    // public function register2(Request $request) {
+    //     $formFields = $request->validate([
+    //         'name' => ['required', 'min:3'],
+    //         'email' => ['required', 'email', Rule::unique('users', 'email')],
+    //         'password' => 'required|confirmed|min:6'
+    //     ]);
+    //     // Hash Password
+    //     $formFields['password'] = bcrypt($formFields['password']);
+    //     // Create User
+    //     $user = User::create($formFields);
+    //     // Login
+    //     // auth()->login($user);
+    //     return redirect('/admin')->with('message', 'User created!');
+    // }
     // public function logout2(Request $request) {
     //     auth()->logout();
     //     $request->session()->invalidate();
