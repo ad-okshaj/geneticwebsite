@@ -204,10 +204,10 @@ min-height : 70vh;"
             <div class="row">
                 <div class="col-md-6">
                     <div class="card" data-aos="flip-up" style="animation-delay: 3s;">
-                        <h2 class="text-center" data-aos="fade-up" style="color:teal">Vision
+                        <h2 class="text-center" data-aos="fade-up" style="color:teal; margin-top: 27px;">Vision
                         </h2>
                         <div class="card-body">
-                            <p style="color:gray;text-align:justify">
+                            <p style="color:gray;text-align:justify;margin-bottom:30px;">
                                 To build a collaborative network of health care providers and scientists to decode the
                                 molecular underpinnings and
                                 understand the extent of rare genetic and bone marrow failure disorders in India.
@@ -217,7 +217,7 @@ min-height : 70vh;"
                 </div>
                 <div class="col-md-6">
                     <div class="card" data-aos="flip-up" style="animation-delay: 3s;">
-                        <h2 class="text-center" style="color:teal">Mission</h2>
+                        <h2 class="text-center" style="color:teal; margin-top: 20px;">Mission</h2>
                         <div class="card-body">
                             <p style="color:gray;text-align:justify">
                                 By identifying the genetic cause of rare genetic diseases and bone marrow failure syndromes
