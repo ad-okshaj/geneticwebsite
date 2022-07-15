@@ -1,6 +1,6 @@
 @extends('layouts.adminlayout')
 @section('title')
-    CRGBMD INDIA | Donars
+    CRGBMD INDIA | Donors
 @endsection
 @section('content2')
     <div class="container-fluid">
