@@ -25,7 +25,6 @@
     </div>
 </nav>
 
-
 <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand " href="userhome">
         <img src="{{ asset('images/logo.png') }}" width="210" height="80" alt="">

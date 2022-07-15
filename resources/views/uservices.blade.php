@@ -3,11 +3,11 @@
     CRGBMD-RESEARCH
 @endsection
 @section('usercontent')
-    <style>
+    {{-- <style>
         li {
             margin-bottom: 40px;
         }
-    </style>
+    </style> --}}
     <!--parallax-->
     <div
         style="  background: url(/images/services.jpg);
