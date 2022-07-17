@@ -27,7 +27,7 @@ Route::get('/admin', function () {
 Route::get('/download/{file}', function ($file) {
     return Storage::download('crgbmd-uploads/' . $file);
 });
- 
+
 //Route::view("about", '/about'); -------> new routing
 
 Route::get('/addevents', function () {
@@ -55,7 +55,7 @@ Route::get('/userrgd', function () {
 
 Route::get('/supportus', function () {
     return view('usupportus');
-}); 
+});
 
 // Show Register Form and Login
 // Route::post('/logout2', [UserController::class, 'logout2']);

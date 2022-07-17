@@ -35,10 +35,10 @@ use App\Http\Requests\MemberEmailRequest;
 
 class AdminController extends Controller
 {
-    public function export()
-    {
-        return Excel::download(new MembersExport, 'users.xlsx');
-    }
+    // public function export()
+    // {
+    //     return Excel::download(new MembersExport, 'users.xlsx');
+    // }
     public function test(Request $request){
         return redirect('/test')->flash('alert', 'User created successfully!');
     }
