@@ -50,7 +50,7 @@ class AdminController extends Controller
         }
         $rep = News::create($data);
 
-        return redirect('/dashboard')->flash('alert', 'News added sucessfully!');
+        return redirect('/dashboard')->with('alert', 'News added sucessfully!');
     }
 
     public function testimonial()
@@ -134,7 +134,7 @@ class AdminController extends Controller
         $rep = gallery::create($data);
         return redirect('/dashboard')->with('alert', 'Added to gallery successfully!');
     }
-    
+
     public function displayteam()
     {
         $res = team::all();

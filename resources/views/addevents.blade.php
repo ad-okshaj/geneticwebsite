@@ -71,9 +71,7 @@
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
                     </div>
-
-
-
+                    
                     <div class="text-right">
                         <button type="submit" class="btn btn-outline-success">Add Event</button>
                     </div>
