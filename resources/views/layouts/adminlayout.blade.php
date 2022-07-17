@@ -22,7 +22,7 @@
         <!-- Sidebar -->
         <div class="border-right" id="sidebar-wrapper" style="background-color: #4e73df;">
             <div class="sidebar-heading">
-                <h4>CRGBMD | IN</h4>
+                <h4 style="padding-left: 21px; padding-top: 21px;">CRGBMD | IN</h4>
             </div>
             <hr>
             <div class="list-group list-group-flush" style="background-color: #4e73df;">
