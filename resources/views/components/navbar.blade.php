@@ -26,44 +26,43 @@
 </nav>
 
 <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand " href="userhome">
-        <img src="{{ asset('images/logo.png') }}" width="210" height="80" alt="">
+    <a class="" href="userhome">
+        <img src="{{ asset('images/logo.png') }}" class="mb-4" width="205" height="75" alt="">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+    <div class="collapse navbar-collapse ml-3" id="navbarSupportedContent1">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+            <li class="nav-item active ml-3">
                 <a class="nav-link font-weight-bold" href="{{ url('userhome') }}">Home <span
                         class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item active ml-3">
                 <a class="nav-link font-weight-bold" href="{{ url('userabout') }}">About Us</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item active ml-3">
                 <a class="nav-link font-weight-bold" href="{{ url('userrgd') }}">Rare Diseases &amp; BMFS</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item active ml-3">
                 <a class="nav-link font-weight-bold" href="{{ url('userservices') }}">Research</a>
             </li>
-
+            <li class="nav-item active ml-3">
+                <a class="nav-link font-weight-bold" href="{{ url('userresources') }}">Resources</a>
+            </li>
+            <li class="nav-item active ml-3">
+                <a class="nav-link font-weight-bold" href="{{ url('userevents') }}">Events</a>
+            </li>
+            <li class="nav-item active ml-3">
+                <a class="nav-link font-weight-bold" href="{{ url('contact') }}">Contact Us</a>
+            </li>
             {{-- <li class="nav-item active">
                         <a class="nav-link font-weight-bold" href="{{url('userpartners')}}">Partners</a>
                     </li> --}}
-            <li class="nav-item active">
-                <a class="nav-link font-weight-bold" href="{{ url('userresources') }}">Resources</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link font-weight-bold" href="{{ url('userevents') }}">Events</a>
-            </li>
             {{-- <li class="nav-item active">
                         <a class="nav-link font-weight-bold" href="{{url('usergallery')}}">Gallery</a>
                     </li> --}}
-            <li class="nav-item active">
-                <a class="nav-link font-weight-bold" href="{{ url('contact') }}">Contact Us</a>
-            </li>
         </ul>
 
         <button type="button" class="btn btn-raised btn-danger text-center mx-5" data-toggle="modal"

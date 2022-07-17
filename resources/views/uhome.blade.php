@@ -118,7 +118,7 @@ min-height : 75vh;"
         {{-- <div class="text-block animated fadeIn" style=" position: absolute;
         bottom: 20px;
         right: 20px;
-        background: rgba(0, 0,255, 0.4); 
+        background: rgba(0, 0,255, 0.4);
         color: white;
         padding-left: 20px;
         padding-right: 20px;
@@ -273,42 +273,51 @@ min-height : 75vh;"
     <div class="container-fluid">
         <div class="row">
             <div class="col">
-                {{-- <div class="row justify-content-center ">
-                <h2 class="heading pl-3 " style="color:teal">
-                    Recognition/Accreditation
-                </h2>
-            </div>
-            <br><br>
-            <div class="row justify-content-center">
-                <br><br>
-                <div class="col ml-2 text-center">
+                {{-- originally removed, recognition/accreditation --}}
 
-                    <a href="https://nitte.edu.in"><img class="card-img-top" src="{{asset('/images/nirf.jpg')}}"
-            alt="Card image cap" style="height:150px;width:150px;"></a>
-        </div>
-        <div class="col ml-2 text-center">
-            <a href="https://nitte.edu.in"><img class="card-img-top mt-3" src="{{asset('/images/qs.jpg')}}" alt="Card image cap" style="height:150px;width:150px"></a>
-        </div>
-        <div class="col ml-2 text-center">
-            <a href="https://nitte.edu.in"><img class="card-img-top mt-3" src="{{asset('/images/qsrank.jpeg')}}" alt="Card image cap" style="height:150px;width:150px"></a>
-        </div>
-    </div><br><br> --}}
+                <div class="row justify-content-center ">
+                    <h2 class="heading pl-3 " style="color:teal">
+                        Recognition/Accreditation
+                    </h2>
+                </div>
+                <br><br>
+                <div class="row justify-content-center">
+                    <br><br>
+                    <div class="col ml-2 text-center">
+
+                        <a href="https://nitte.edu.in"><img class="card-img-top" src="{{ asset('/images/nirf.jpg') }}"
+                                alt="Card image cap" style="height:150px;width:150px;"></a>
+                    </div>
+                    <div class="col ml-2 text-center">
+                        <a href="https://nitte.edu.in"><img class="card-img-top mt-3" src="{{ asset('/images/qs.jpg') }}"
+                                alt="Card image cap" style="height:150px;width:150px"></a>
+                    </div>
+                    <div class="col ml-2 text-center">
+                        <a href="https://nitte.edu.in"><img class="card-img-top mt-3"
+                                src="{{ asset('/images/qsrank.jpeg') }}" alt="Card image cap"
+                                style="height:150px;width:150px"></a>
+                    </div>
+                </div><br><br>
+                {{-- originally removed, recognition/accreditation --}}
+
+
                 <div class="row">
                     <div class="col">
                         <h2 class="heading pl-3 text-center" style="color:teal">
                             Supported By
                         </h2>
                         <div class="row justify-content-center">
-                            <a href="https://nitte.edu.in"><img class="card-img-top ml-3 "
-                                    src="{{ asset('/images/nittedu1.png') }}" alt="Card image cap"
-                                    style="height:130px;width:15  0px"></a>
+                            <a href="https://nitte.edu.in">
+                                <img class="card-img-top ml-2" src="{{ asset('/images/nittedu1.png') }}"
+                                    alt="Card image cap">
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-6 col-sm-12 col-xs-12" style="background-color: #f1f1f1">
-                <h3 class="px-3 mt-1" style="color: #505050">
+                <h3 class="px-3 mt-3" style="color: #505050">
                     <i class="fa fa-newspaper-o"></i> Recent News
                 </h3>
                 <hr>
@@ -450,7 +459,6 @@ alt="Card image cap" style="height:100px;width:150px"></a>
                             <img class="card-pop" id="{{ $event->id }}" src="/download/{{ $event->eventimage }}"
                                 onclick="maginify(id)" alt="Card image cap" style="max-height:300px !important"
                                 data-toggle="modal" data-target="#eventImage{{ $event->id }}">
-
                             <div class="card-header text-white h5" style="background-color:darkblue;text-align:justify">
                                 <b>{{ $event->eventname }}</b>
                             </div>
