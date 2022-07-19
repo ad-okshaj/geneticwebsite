@@ -20,7 +20,6 @@
             .loder {
                 width: 100vw;
             }
-
         }
 
         .loderimg {
@@ -129,7 +128,6 @@ min-height : 75vh;"
                 <i>-Ryunosuke
                     Satoro</i></footer>
         </blockquote>
-
     </div> --}}
     </div>
 
@@ -236,15 +234,10 @@ min-height : 75vh;"
     <h2 class="text-center myheader " style="color:teal;">News/Announcements</h2>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"
         style="background-color:black !important;min-height:200px;padding-top:20px;">
-
         <div class="carousel-inner">
             @foreach ($news as $value)
-
             <div class="carousel-item {{($loop->first)?'active':''}}">
-
-
 <div class="container">
-
     <a class="text-white h3" {!! is_null($value->flyer)?
         'href="'.asset('download/'.$value->flyer).'"':""!!}>
         {{$value->newshead}}
@@ -274,8 +267,7 @@ min-height : 75vh;"
         <div class="row">
             <div class="col">
                 {{-- originally removed, recognition/accreditation --}}
-
-                <div class="row justify-content-center ">
+                {{-- <div class="row justify-content-center ">
                     <h2 class="heading pl-3 " style="color:teal">
                         Recognition/Accreditation
                     </h2>
@@ -297,7 +289,7 @@ min-height : 75vh;"
                                 src="{{ asset('/images/qsrank.jpeg') }}" alt="Card image cap"
                                 style="height:150px;width:150px"></a>
                     </div>
-                </div><br><br>
+                </div><br><br> --}}
                 {{-- originally removed, recognition/accreditation --}}
 
 
@@ -326,14 +318,14 @@ min-height : 75vh;"
                     <div class="marquee">
                         @foreach ($news as $value)
                             <div class="pb-4">
-                                <a href="" style="color: #505050" {!! is_null($value->flyer) ? 'href="/download/' . $value->flyer . '"' : '' !!}>
+                                <a href="#" onclick="return false;" style="color: #505050" {!! is_null($value->flyer) ? 'href="/download/' . $value->flyer . '"' : '' !!}>
                                     <h6>
                                         <i class="fa fa-arrow-right"></i> {{ $value->newshead }}
                                     </h6>
                                     <div>
-                                        <img src="{{ asset('/images/connect.jpg') }}" height="100" width="100"
-                                            alt="{{ $value->flyer }}">
-                                        <div style="float: right; margin-right: 280px;">
+                                        <img class="pb-3" src="{{ asset('/images/connect.jpg') }}" height="100"
+                                            width="100" alt="{{ $value->flyer }}">
+                                        <div>
                                             {{ $value->description }}
                                             <br><small>Date : {{ $value->newsdate }}<br>Last updated :
                                                 {{ $value->updated_at->diffForHumans() }}</small>
@@ -347,13 +339,12 @@ min-height : 75vh;"
 
                 </div>
                 <div class="text-center">
-                    <h4>Need Assistance?</h4>
+                    <h4 class="mt-2 mb-4">Need Assistance?</h4>
                     <div class="text-center">
                         <a href="/contact" class="btn btn-outline-secondary">Contact us</a>
                     </div>
                 </div>
             </div>
-
             {{-- temp --}}
         </div>
     </div>
@@ -395,7 +386,6 @@ alt="Card image cap" style="height:100px;width:150px"></a>
                     <a href="https://nitte.edu.in"><img class="card-img-top" src="{{asset('/images/qsrank.jpeg')}}" alt="Card image cap" style="height:150px;width:150px"></a>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
@@ -574,7 +564,6 @@ alt="Card image cap" style="height:100px;width:150px"></a>
             var dots = document.getElementById("dots");
             var moreText = document.getElementById("more");
             var btnText = document.getElementById("myBtn");
-
             if (dots.style.display === "none") {
                 dots.style.display = "inline";
                 btnText.innerHTML = "Read more";
@@ -585,18 +574,14 @@ alt="Card image cap" style="height:100px;width:150px"></a>
                 moreText.style.display = "inline";
             }
         }
-
         // var preloader = document.getElementById('loading');
         //         function loadingFunction() {
         //                         myVar = setTimeout(showPage, 1000);
         //                     }
-
         //                     function showPage() {
         //                         preloader.style.opacity = 0;
         //                         preloader.style.display = "none";
-
         //                     }
-
         setTimeout(function() {
             let loader = document.querySelector(".loder");
             loader.className += " hidden";
