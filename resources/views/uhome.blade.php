@@ -316,25 +316,30 @@ min-height : 75vh;"
                 </div>
             </div>
 
-            <div class="col-md-6 col-sm-12 col-xs-12" style="background-color: #f1f1f1">
-                <h3 class="px-3 mt-3" style="color: #505050">
+
+            <div class="col-md-6 col-sm-12 col-xs-12" style="background-color: #f1f1f1;">
+                <h3 class="px-3 mt-4" style="color: #505050">
                     <i class="fa fa-newspaper-o"></i> Recent News
                 </h3>
                 <hr>
                 <div class="marquee-wrap">
                     <div class="marquee">
                         @foreach ($news as $value)
-                            <div>
+                            <div class="pb-4">
                                 <a href="" style="color: #505050" {!! is_null($value->flyer) ? 'href="/download/' . $value->flyer . '"' : '' !!}>
                                     <h6>
                                         <i class="fa fa-arrow-right"></i> {{ $value->newshead }}
                                     </h6>
-                                    <p>
-                                        {{ $value->description }}
-                                        <br><small>Date : {{ $value->newsdate }}<br>Last updated :
-                                            {{ $value->updated_at->diffForHumans() }}</small>
-                                    </p>
+                                    <div>
+                                        <img src="{{ asset('/images/connect.jpg') }}" height="100" width="100"
+                                            alt="{{ $value->flyer }}">
+                                        <div style="float: right; margin-right: 280px;">
+                                            {{ $value->description }}
+                                            <br><small>Date : {{ $value->newsdate }}<br>Last updated :
+                                                {{ $value->updated_at->diffForHumans() }}</small>
+                                        </div>
 
+                                    </div>
                                 </a>
                             </div>
                         @endforeach
@@ -348,6 +353,8 @@ min-height : 75vh;"
                     </div>
                 </div>
             </div>
+
+            {{-- temp --}}
         </div>
     </div>
     {{-- end of recent news section --}}
