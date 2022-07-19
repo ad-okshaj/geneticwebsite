@@ -21,7 +21,7 @@ min-height : 60vh;">
                 <div class="col-md-3">
                     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 
-                        <a class="nav-link active" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile"
+                        <a class="nav-link active mt-5" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile"
                             role="tab" aria-controls="v-pills-profile" aria-selected="false" style="color:teal">About
                             Rare
                             Genetic Disorders</a>

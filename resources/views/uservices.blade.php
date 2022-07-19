@@ -81,8 +81,8 @@
             <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                     <h4 style="color: teal">Ongoing projects</h4>
-                    <div class="card">
-                        <div class="container">
+                    <div class="card mt-4" style="border: 1px solid black;">
+                        <div class="container mt-4 mb-4">
                             <br>
                             <h6 style="color: crimson">Identification of a regional cluster of patients with
                                 Treacher
@@ -136,8 +136,8 @@
                         </div>
                     </div>
 
-                    <div class="card">
-                        <div class="container">
+                    <div class="card" style="border: 1px solid black;">
+                        <div class="container mt-4 mb-4">
                             <br>
                             <h6 style="color: crimson">A Case report of Lesch-Nyhan syndrome: a very rare genetic disorder
                             </h6><br>
@@ -188,8 +188,9 @@
                         </div>
                     </div>
 
-                    <div class="card">
-                        <div class="container">
+                    <div class="card" style="border: 1px solid black;">
+                        <div class="container mt-4
+                        mb-4">
                             <br>
                             <h6 style="color: crimson">An L-Leucine-rich diet in the clinical response of a patient with
                                 Ghosal hematodiaphyseal

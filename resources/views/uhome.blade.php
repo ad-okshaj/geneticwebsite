@@ -340,7 +340,7 @@ min-height : 75vh;"
 
                 </div>
                 <div class="text-center mt-3" style="border-top: 2px solid rgba(46, 49, 145, .5);">
-                    <h4 class="mt-3">Need Assistance?</h4>
+                    <h4 class="mt-4">Need Assistance?</h4>
                     <div class="text-center">
                         <a href="/contact" class="btn btn-outline-secondary mb-3">Contact us</a>
                     </div>

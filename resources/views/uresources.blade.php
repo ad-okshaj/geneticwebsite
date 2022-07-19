@@ -21,7 +21,7 @@ min-height : 60vh;">
             <div class="row ">
                 <div class="col-md-3">
                     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                        <a class="nav-link active" id="v-pills-rgd-tab" data-toggle="pill" href="#v-pills-rgd"
+                        <a class="nav-link active mt-5" id="v-pills-rgd-tab" data-toggle="pill" href="#v-pills-rgd"
                             role="tab" aria-controls="v-pills-rgd" aria-selected="false"
                             style="color:teal">Resources</a>
                         <a class="nav-link" id="v-pills-bmd-tab" data-toggle="pill" href="#v-pills-bmd" role="tab"
