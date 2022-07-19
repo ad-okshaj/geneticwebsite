@@ -360,7 +360,7 @@ height : 60vh;">
                 <div class="row">
                     @foreach ($mg as $member)
                         <div class="col-md-3">
-                            <div class="card" style="min-height:350px;width:200px;">
+                            <div class="card" style="min-height:350px;width:200px; border: 1px solid black;">
                                 <img class="card-img-top rounded" src="/download/{{ $member->photo }}"
                                     alt="Card image cap" style="height:220px">
                                 <h5 class="text-center pt-4">{{ $member->name }}</h5>
@@ -422,7 +422,7 @@ height : 60vh;">
                     @foreach ($ad as $member)
                         <div class="col-md-3">
 
-                            <div class="card" style="min-height:350px;width:200px;">
+                            <div class="card" style="min-height:350px;width:200px; border: 1px solid black;">
                                 <img class="card-img-top rounded" src="/download/{{ $member->photo }}"
                                     alt="Card image cap" style="height:220px">
                                 <h5 class="text-center pt-4">{{ $member->name }}</h5>
@@ -483,7 +483,7 @@ height : 60vh;">
                     @foreach ($sc as $member)
                         <div class="col-md-3">
 
-                            <div class="card " style="min-height:350px;width:200px;">
+                            <div class="card " style="min-height:350px;width:200px; border: 1px solid black;">
                                 <img class="card-img-top rounded" src="/download/{{ $member->photo }}"
                                     alt="Card image cap" style="height:220px">
                                 <h5 class="text-center pt-4">{{ $member->name }}</h5>

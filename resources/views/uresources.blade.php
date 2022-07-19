@@ -10,11 +10,11 @@ background-repeat: no-repeat;
 background-size: cover;
 background-position: center;
 width: 100% !important;
-min-height : 77vh;">
+min-height : 60vh;">
     </div>
     <section>
         <div id="about">
-            <h2 class="text-center animated fadeInUp offset-2" style="color: teal;animation-delay: 1s">Our Resources
+            <h2 class="text-center animated fadeInUp offset-3 mt-2" style="color: teal;animation-delay: 1s">Our Resources
             </h2>
         </div>
         <div class="container">

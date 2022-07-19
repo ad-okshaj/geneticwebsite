@@ -205,7 +205,7 @@ min-height : 75vh;"
                         <h2 class="text-center" data-aos="fade-up" style="color:teal; margin-top: 27px;">Vision
                         </h2>
                         <div class="card-body">
-                            <p style="color:gray;text-align:justify;margin-bottom:30px;">
+                            <p style="color:black;text-align:justify;margin-bottom:30px;">
                                 To build a collaborative network of health care providers and scientists to decode the
                                 molecular underpinnings and
                                 understand the extent of rare genetic and bone marrow failure disorders in India.
@@ -217,7 +217,7 @@ min-height : 75vh;"
                     <div class="card" data-aos="flip-up" style="animation-delay: 3s;">
                         <h2 class="text-center" style="color:teal; margin-top: 20px;">Mission</h2>
                         <div class="card-body">
-                            <p style="color:gray;text-align:justify">
+                            <p style="color:black;text-align:justify">
                                 By identifying the genetic cause of rare genetic diseases and bone marrow failure syndromes
                                 and unraveling the
                                 underlying disease biology, we aspire to provide new and innovative insights leading to
@@ -295,12 +295,12 @@ min-height : 75vh;"
 
                 <div class="row">
                     <div class="col">
-                        <h2 class="heading pl-3 text-center" style="color:teal">
+                        <h2 class="heading pl-3 text-center mt-5 pt-5 mb-4" style="color:teal; ">
                             Supported By
                         </h2>
                         <div class="row justify-content-center">
                             <a href="https://nitte.edu.in">
-                                <img class="card-img-top ml-2" src="{{ asset('/images/nittedu1.png') }}"
+                                <img class="" width="400" src="{{ asset('/images/nittedu.jpg') }}"
                                     alt="Card image cap">
                             </a>
                         </div>
@@ -309,8 +309,9 @@ min-height : 75vh;"
             </div>
 
 
-            <div class="col-md-6 col-sm-12 col-xs-12" style="background-color: #f1f1f1;">
-                <h3 class="px-3 mt-4" style="color: #505050">
+            <div class="col-md-6 col-sm-12 col-xs-12 card mr-3"
+                style="background-color: #f1f1f1;  border: 1px solid black;">
+                <h3 class="px-3 mt-4" style="color: #2e3191">
                     <i class="fa fa-newspaper-o"></i> Recent News
                 </h3>
                 <hr>
@@ -323,8 +324,8 @@ min-height : 75vh;"
                                         <i class="fa fa-arrow-right"></i> {{ $value->newshead }}
                                     </h6>
                                     <div>
-                                        <img class="pb-3" src="{{ asset('/images/connect.jpg') }}" height="100"
-                                            width="100" alt="{{ $value->flyer }}">
+                                        <img class="pb-3" src="{{ asset('/images/connect.jpg') }}" height="150"
+                                            width="150" alt="{{ $value->flyer }}">
                                         <div>
                                             {{ $value->description }}
                                             <br><small>Date : {{ $value->newsdate }}<br>Last updated :
@@ -338,10 +339,10 @@ min-height : 75vh;"
                     </div>
 
                 </div>
-                <div class="text-center">
-                    <h4 class="mt-2 mb-4">Need Assistance?</h4>
+                <div class="text-center mt-3" style="border-top: 2px solid rgba(46, 49, 145, .5);">
+                    <h4 class="mt-3">Need Assistance?</h4>
                     <div class="text-center">
-                        <a href="/contact" class="btn btn-outline-secondary">Contact us</a>
+                        <a href="/contact" class="btn btn-outline-secondary mb-3">Contact us</a>
                     </div>
                 </div>
             </div>
