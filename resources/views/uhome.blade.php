@@ -320,9 +320,9 @@ min-height : 75vh;"
                         @foreach ($news as $value)
                             <div class="pb-4">
                                 <a href="#" onclick="return false;" style="color: #505050" {!! is_null($value->flyer) ? 'href="/download/' . $value->flyer . '"' : '' !!}>
-                                    <h6>
+                                    <h5 class="font-weight-bold">
                                         <i class="fa fa-arrow-right"></i> {{ $value->newshead }}
-                                    </h6>
+                                    </h5>
                                     <div>
                                         <img class="pb-3" src="{{ asset('/images/connect.jpg') }}" height="150"
                                             width="150" alt="{{ $value->flyer }}">
