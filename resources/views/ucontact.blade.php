@@ -38,7 +38,7 @@
                 <div class="card bg-light">
                     <div class="card-body">
                         <h5>
-                            <p>Aarti Khanna-Gupta, PhD </p>
+                            <p>Arati Khanna-Gupta, PhD </p>
                         </h5>
                         <h6>
                             <p>Consultant in Precision Medicine<br>

@@ -262,7 +262,7 @@
                     <div class="card" style="border: 1px solid black;">
                         <div class="container">
                             <br>
-                            <h4 style="color: teal">Anirban Chakraborty, PhD</h4>
+                            <h4 style="color: teal" class="mt-4">Anirban Chakraborty, PhD</h4>
                             <br>
                             <img src="{{ asset('/images/research1.jpeg') }}" class="img-fluid">
                             <ul style="text-align: justify;">
@@ -357,7 +357,7 @@
                     <div class="card" style="border: 1px solid black;">
                         <div class="container">
                             <br>
-                            <h4 style="color: teal">Arati Khanna-Gupta, PhD</h4>
+                            <h4 style="color: teal" class="mt-4">Arati Khanna-Gupta, PhD</h4>
                             <br>
                             <img src="{{ asset('/images/research2.png') }}" class="img-thumbnail">
                             <br>
