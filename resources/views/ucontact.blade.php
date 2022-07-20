@@ -21,7 +21,7 @@
             <div class="col-md-4">
                 <div class="card bg-light">
                     <div class="card-body">
-                        <h5>Dr. Anirban Chakraborty, PhD<p>
+                        <h5>Anirban Chakraborty, PhD<p>
                         </h5>
                         <h6>
                             <p> Deputy Director</p>
@@ -38,7 +38,7 @@
                 <div class="card bg-light">
                     <div class="card-body">
                         <h5>
-                            <p>Dr. Aarti Khanna-Gupta, PhD </p>
+                            <p>Aarti Khanna-Gupta, PhD </p>
                         </h5>
                         <h6>
                             <p>Consultant in Precision Medicine<br>

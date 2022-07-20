@@ -259,7 +259,7 @@
                         syndromes. A selected list of publications attest to these achievements.</p>
                 </div>
                 <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                    <div class="card">
+                    <div class="card" style="border: 1px solid black;">
                         <div class="container">
                             <br>
                             <h4 style="color: teal">Anirban Chakraborty, PhD</h4>
@@ -354,7 +354,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" style="border: 1px solid black;">
                         <div class="container">
                             <br>
                             <h4 style="color: teal">Arati Khanna-Gupta, PhD</h4>
