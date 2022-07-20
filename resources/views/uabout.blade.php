@@ -394,12 +394,12 @@ height : 60vh;">
                                                         </div>
                                                     </div>
                                                 </div><br>
-                                                <p style="color:darkblue"><b>Affiliation: </b>{{ $member->affiliation }}
+                                                <p style="color:black"><b>Affiliation: </b>{{ $member->affiliation }}
                                                 </p>
-                                                <p style="color:darkblue"><b>Designation: </b>{{ $member->designation }}
+                                                <p style="color:black"><b>Designation: </b>{{ $member->designation }}
                                                 </p>
-                                                <p style="color:darkblue"><b>Position: </b>{{ $member->position }}</p>
-                                                <p style="color:darkblue"><b>Email: </b>{{ $member->email }}</p>
+                                                <p style="color:black"><b>Position: </b>{{ $member->position }}</p>
+                                                <p style="color:black"><b>Email: </b>{{ $member->email }}</p>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary"
@@ -437,7 +437,7 @@ height : 60vh;">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h4 class="text-center" style="color:darkblue">
+                                                <h4 class="text-center" style="color:black">
                                                     <b>{{ $member->name }}</b>
                                                 </h4>
                                                 <button type="button" class="close" data-dismiss="modal"
@@ -457,12 +457,12 @@ height : 60vh;">
                                                         </div>
                                                     </div>
                                                 </div><br>
-                                                <p style="color:darkblue"><b>Affiliation: </b>{{ $member->affiliation }}
+                                                <p style="color:black"><b>Affiliation: </b>{{ $member->affiliation }}
                                                 </p>
-                                                <p style="color:darkblue"><b>Designation: </b>{{ $member->designation }}
+                                                <p style="color:black"><b>Designation: </b>{{ $member->designation }}
                                                 </p>
-                                                <p style="color:darkblue"><b>Position: </b>{{ $member->position }}</p>
-                                                <p style="color:darkblue"><b>Email: </b>{{ $member->email }}</p>
+                                                <p style="color:black"><b>Position: </b>{{ $member->position }}</p>
+                                                <p style="color:black"><b>Email: </b>{{ $member->email }}</p>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary"
@@ -498,7 +498,7 @@ height : 60vh;">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h4 class=" text-center" style="color:darkblue">
+                                                <h4 class=" text-center" style="color:black">
                                                     <b>{{ $member->name }}</b>
                                                 </h4>
                                                 <button type="button" class="close" data-dismiss="modal"
@@ -507,7 +507,7 @@ height : 60vh;">
                                                 </button>
                                             </div>
                                             <div class="modal-body">
-                                                <div class="card"
+                                                <div class="card offset-sm-3"
                                                     style="height:260px !important;width:260px !important">
                                                     <div class="card-img-top">
                                                         <div class="text-center">
@@ -518,12 +518,12 @@ height : 60vh;">
                                                         </div>
                                                     </div>
                                                 </div><br>
-                                                <p style="color:darkblue"><b>Affiliation: </b>{{ $member->affiliation }}
+                                                <p style="color:black"><b>Affiliation: </b>{{ $member->affiliation }}
                                                 </p>
-                                                <p style="color:darkblue"><b>Designation: </b>{{ $member->designation }}
+                                                <p style="color:black"><b>Designation: </b>{{ $member->designation }}
                                                 </p>
-                                                <p style="color:darkblue"><b>Position: </b>{{ $member->position }}</p>
-                                                <p style="color:darkblue"><b>Email: </b>{{ $member->email }}</p>
+                                                <p style="color:black"><b>Position: </b>{{ $member->position }}</p>
+                                                <p style="color:black"><b>Email: </b>{{ $member->email }}</p>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary"
