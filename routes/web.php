@@ -87,7 +87,7 @@ Route::controller(AdminController::class)->group(function(){
     Route::get('/donors', 'displaydonors')->middleware('auth');
     Route::get('/managenews', 'displaynews')->middleware('auth');
     Route::get('/managetestimonial',  'displaytestimonials')->middleware('auth');
-    Route::get('/manageevents',  'testimonial')->middleware('auth');
+    Route::get('/manageevents',  'displayevents')->middleware('auth');
     Route::post('/addtestimonial',  'addtestimonial')->middleware('auth');
     Route::post('/addnewss',  'news')->middleware('auth');
     Route::post('/addeventss',  'events')->middleware('auth');
