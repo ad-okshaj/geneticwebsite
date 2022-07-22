@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Throwable;
@@ -24,7 +23,6 @@ use Illuminate\Validation\Rule;
 use App\Http\Requests\addmember;
 use App\Http\Requests\AddGallery;
 use Illuminate\Support\Facades\Log;
-
 use Illuminate\Support\Facades\Mail;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Http\Requests\AddTestimonial;
@@ -35,10 +33,10 @@ use App\Http\Requests\MemberEmailRequest;
 
 class AdminController extends Controller
 {
-    // public function export()
-    // {
-    //     return Excel::download(new MembersExport, 'users.xlsx');
-    // }
+    public function export()
+    {
+        return Excel::download(new MembersExport, 'users.xlsx');
+    }
     public function test(Request $request){
         return redirect('/test')->flash('alert', 'User created successfully!');
     }

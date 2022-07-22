@@ -79,7 +79,7 @@ Route::controller(DonateController::class)->group(function(){
     Route::get('thankyou/{id}','store');
 });
 
-// Route::get('/export', [AdminController::class, 'export']);
+Route::get('/export', [AdminController::class, 'export']);
 Route::controller(AdminController::class)->group(function(){
     Route::get('/testimonial', 'testimonial')->middleware('auth');
     Route::get('/team','displayteam')->middleware('auth');
