@@ -513,8 +513,8 @@ height : 60vh;">
                                                     <p style="color:black" class="mb-2"><b>Email:
                                                         </b><span>{{ $member->email }}</span></p>
                                                 </div>
-                                                <div class="social-links d-flex justify-content-center">
-                                                    <a href="#!" class="mx-2"><img
+                                                <div class="knowmoresocial-links d-flex justify-content-center">
+                                                    <a href="{{ $member->email }}" class="mx-2"><img
                                                             src="{{ asset('images\email.svg') }}" alt="Email"></a>
                                                 </div>
                                             </div>
@@ -525,6 +525,7 @@ height : 60vh;">
                                         </div>
                                     </div>
                                 </div>
+
 
 
                                 {{-- -------------------------------------------------editing this----------------------------------------------------------- --}}
