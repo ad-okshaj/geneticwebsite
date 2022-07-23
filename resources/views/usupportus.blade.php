@@ -36,7 +36,7 @@ min-height : 400px;">
 
     <div class="container">
         <br>
-        <h6 class="text-center">
+        <h6 class="text-center mt-4 mb-5">
             We cordially invite physicians, clinicians, academic
             researchers, scientists, genetic counselors, and
             volunteers to join the consortium and work together
@@ -44,9 +44,9 @@ min-height : 400px;">
             genetic diseases
         </h6>
         <h2 class="mt-4" style="color: gray;padding-bottom: 1em;">Support us by</h2>
-        <div class="card">
-            <div class="card-body">
-                <ul>
+        <div class="card mb-5">
+            <div class="card-body" style="border: 1px solid black;">
+                <ul class="mt-4 mb-4">
                     <h6>
                         <li> Helping to build a comprehensive repository of
                             rare genetic diseases and bone marrow failure

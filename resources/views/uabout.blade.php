@@ -372,35 +372,43 @@ height : 60vh;">
                                         Know More
                                     </button>
                                 </div>
-                                <div class="modal fade" id="team{{ $member->id }}" tabindex="-1" role="dialog">
+                                <div class="modal fade container" id="team{{ $member->id }}" tabindex="-1"
+                                    role="dialog">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h4 class=" text-center pt-4"><b>{{ $member->name }}</b>
+                                            <div class="text-center mt-5">
+                                                <h4 class=" ml-3 text-center" style="color:black">
+                                                    <b>{{ $member->name }}</b>
                                                 </h4>
-                                                <button type="button" class="close" data-dismiss="modal"
-                                                    aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
                                             </div>
                                             <div class="modal-body">
-                                                <div class="card offset-sm-3"
+                                                <div class=" offset-sm-3"
                                                     style="height:260px !important;width:260px !important">
-                                                    <div class="card-img-top">
-                                                        <div class="text-center">
-                                                            <img class=" text-center"
-                                                                src="/download/{{ $member->photo }}"
-                                                                style="height:250px !important;width:250px !important"
-                                                                alt="Card image cap">
-                                                        </div>
+                                                    <div class="text-center">
+
+                                                        <img class="knowmoreimg-circle mr-5 mb-5"
+                                                            src="/download/{{ $member->photo }}"
+                                                            style="height:250px !important;width:250px !important"
+                                                            alt="Card image cap">
+
                                                     </div>
                                                 </div><br>
-                                                <p style="color:black"><b>Affiliation: </b>{{ $member->affiliation }}
-                                                </p>
-                                                <p style="color:black"><b>Designation: </b>{{ $member->designation }}
-                                                </p>
-                                                <p style="color:black"><b>Position: </b>{{ $member->position }}</p>
-                                                <p style="color:black"><b>Email: </b>{{ $member->email }}</p>
+                                                <div class="text-center mb-4">
+                                                    <p style="color:black" class="mb-2">
+                                                        <b>Affiliation: </b>
+                                                        <span>{{ $member->affiliation }}</span>
+                                                    </p>
+                                                    <p style="color:black" class="mb-2"><b>Designation:
+                                                        </b><span>{{ $member->designation }}</span></p>
+                                                    <p style="color:black" class="mb-2"><b>Position:
+                                                        </b><span>{{ $member->position }}</span></p>
+                                                    <p style="color:black" class="mb-2"><b>Email:
+                                                        </b><span>{{ $member->email }}</span></p>
+                                                </div>
+                                                <div class="knowmoresocial-links d-flex justify-content-center">
+                                                    <a href="mailto:{{ $member->email }}" class="mx-2"><img
+                                                            src="{{ asset('images\email.svg') }}" alt="Email"></a>
+                                                </div>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary"
@@ -431,7 +439,7 @@ height : 60vh;">
                                 <div class="text-center">
                                     <button type="button" class="btn btn-primary" data-toggle="modal"
                                         data-target="#team{{ $member->id }}">
-                                        This One
+                                        Know More
                                     </button>
                                 </div>
 
@@ -482,7 +490,7 @@ height : 60vh;">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="text-center mt-5">
-                                                <h4 class="text-center" style="color:black">
+                                                <h4 class="ml-3 text-center" style="color:black">
                                                     <b>{{ $member->name }}</b>
                                                 </h4>
                                             </div>
@@ -511,7 +519,7 @@ height : 60vh;">
                                                         </b><span>{{ $member->email }}</span></p>
                                                 </div>
                                                 <div class="knowmoresocial-links d-flex justify-content-center">
-                                                    <a href="{{ $member->email }}" class="mx-2"><img
+                                                    <a href="mailto:{{ $member->email }}" class="mx-2"><img
                                                             src="{{ asset('images\email.svg') }}" alt="Email"></a>
                                                 </div>
                                             </div>
@@ -547,36 +555,43 @@ height : 60vh;">
                                         Know More
                                     </button>
                                 </div>
-                                <div class="modal fade" id="team{{ $member->id }}" tabindex="-1" role="dialog">
+                                <div class="modal fade container" id="team{{ $member->id }}" tabindex="-1"
+                                    role="dialog">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h4 class=" text-center" style="color:black">
+                                            <div class="text-center mt-5">
+                                                <h4 class="ml-3 text-center" style="color:black">
                                                     <b>{{ $member->name }}</b>
                                                 </h4>
-                                                <button type="button" class="close" data-dismiss="modal"
-                                                    aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
                                             </div>
                                             <div class="modal-body">
-                                                <div class="card offset-sm-3"
+                                                <div class=" offset-sm-3"
                                                     style="height:260px !important;width:260px !important">
-                                                    <div class="card-img-top">
-                                                        <div class="text-center">
-                                                            <img class=" text-center"
-                                                                src="/download/{{ $member->photo }}"
-                                                                style="height:250px !important;width:250px !important"
-                                                                alt="Card image cap">
-                                                        </div>
+                                                    <div class="text-center">
+
+                                                        <img class="knowmoreimg-circle mr-5 mb-5"
+                                                            src="/download/{{ $member->photo }}"
+                                                            style="height:250px !important;width:250px !important"
+                                                            alt="Card image cap">
+
                                                     </div>
                                                 </div><br>
-                                                <p style="color:black"><b>Affiliation: </b>{{ $member->affiliation }}
-                                                </p>
-                                                <p style="color:black"><b>Designation: </b>{{ $member->designation }}
-                                                </p>
-                                                <p style="color:black"><b>Position: </b>{{ $member->position }}</p>
-                                                <p style="color:black"><b>Email: </b>{{ $member->email }}</p>
+                                                <div class="text-center mb-4">
+                                                    <p style="color:black" class="mb-2">
+                                                        <b>Affiliation: </b>
+                                                        <span>{{ $member->affiliation }}</span>
+                                                    </p>
+                                                    <p style="color:black" class="mb-2"><b>Designation:
+                                                        </b><span>{{ $member->designation }}</span></p>
+                                                    <p style="color:black" class="mb-2"><b>Position:
+                                                        </b><span>{{ $member->position }}</span></p>
+                                                    <p style="color:black" class="mb-2"><b>Email:
+                                                        </b><span>{{ $member->email }}</span></p>
+                                                </div>
+                                                <div class="knowmoresocial-links d-flex justify-content-center">
+                                                    <a href="mailto:{{ $member->email }}" class="mx-2"><img
+                                                            src="{{ asset('images\email.svg') }}" alt="Email"></a>
+                                                </div>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary"
