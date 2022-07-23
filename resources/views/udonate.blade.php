@@ -4,18 +4,16 @@
 @endsection
 @section('usercontent')
     <div class="container mt-3 mb-3">
-        <h2 class="mt-4" style="color: gray;padding-bottom: 1em; text-align:center;">Donate</h2>
-
-        <div class="card">
+        <h2 class="mt-5" style="color: gray;padding-bottom: 1em; text-align:center;">Donate</h2>
+        <div class="card mb-5" style="border: 1px solid black;">
             <div class="card-body">
-                <h4 class="text-center" style="font-style: oblique;color:grey">" The value of a man resides in what he gives
+                <h4 class="text-center mt-3" style="font-style: oblique;color:grey">" The value of a man resides in what he
+                    gives
                     "
                 </h4>
                 <div class="text-center">
                     <span class="text-center">- Albert Einstein</span>
                 </div>
-
-
                 <p style="text-align: justify" class="pt-5">
                     Help us to address the predicament and morbidity that Rare diseases and Bone marrow Failure Disorders
                     present,
@@ -55,12 +53,10 @@
                     </li>
                 </ul>
                 </p>
-
                 <p style="text-align: justify">
                     Your kindness and generosity will pave the way to a brighter future for afflicted patients, especially
                     children.
                 </p>
-
                 <p style="text-align: justify">To donate to CRG.BMD Please click on the <span class="h6">DONATE</span>
                     button</p>
                 <div class="text-center">
