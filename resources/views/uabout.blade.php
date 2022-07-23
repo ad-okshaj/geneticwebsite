@@ -481,21 +481,17 @@ height : 60vh;">
                                     role="dialog">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h4 class="text-center mb-4" style="color:black">
+                                            <div class="text-center mt-5">
+                                                <h4 class="text-center" style="color:black">
                                                     <b>{{ $member->name }}</b>
                                                 </h4>
-                                                <button type="button" class="close" data-dismiss="modal"
-                                                    aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
                                             </div>
                                             <div class="modal-body">
-                                                <div class="card offset-sm-3"
+                                                <div class=" offset-sm-3"
                                                     style="height:260px !important;width:260px !important">
                                                     <div class="text-center">
 
-                                                        <img class="knowmoreimg-circle mx-auto mb-3"
+                                                        <img class="knowmoreimg-circle mr-5 mb-5"
                                                             src="/download/{{ $member->photo }}"
                                                             style="height:250px !important;width:250px !important"
                                                             alt="Card image cap">
@@ -526,8 +522,6 @@ height : 60vh;">
                                         </div>
                                     </div>
                                 </div>
-
-
 
                                 {{-- -------------------------------------------------editing this----------------------------------------------------------- --}}
 
