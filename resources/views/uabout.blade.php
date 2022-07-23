@@ -431,10 +431,12 @@ height : 60vh;">
                                 <div class="text-center">
                                     <button type="button" class="btn btn-primary" data-toggle="modal"
                                         data-target="#team{{ $member->id }}">
-                                        Know More
+                                        This One
                                     </button>
                                 </div>
-                                <div class="modal fade" id="team{{ $member->id }}" tabindex="-1" role="dialog">
+
+
+                                {{-- <div class="modal fade" id="team{{ $member->id }}" tabindex="-1" role="dialog">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -471,9 +473,63 @@ height : 60vh;">
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
+                                </div> --}}
 
+                                {{-- -------------------------------------------------editing this----------------------------------------------------------- --}}
+
+                                <div class="modal fade" id="team{{ $member->id }}" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="text-center" style="color:black">
+                                                    <b>{{ $member->name }}</b>
+                                                </h4>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="card offset-sm-3"
+                                                    style="height:260px !important;width:260px !important">
+                                                    <div class="text-center">
+                                                        <div class="card-img-top">
+                                                            <img class=" text-center"
+                                                                src="/download/{{ $member->photo }}"
+                                                                style="height:250px !important;width:250px !important"
+                                                                alt="Card image cap">
+                                                        </div>
+                                                    </div>
+                                                </div><br>
+                                                <div class="text-center mb-4">
+                                                    <p style="color:black" class="mb-2">
+                                                        <b>Affiliation: </b>
+                                                        <span>{{ $member->affiliation }}</span>
+                                                    </p>
+                                                    <p style="color:black" class="mb-2"><b>Designation:
+                                                        </b><span>{{ $member->designation }}</span></p>
+                                                    <p style="color:black" class="mb-2"><b>Position:
+                                                        </b><span>{{ $member->position }}</span></p>
+                                                    <p style="color:black" class="mb-2"><b>Email:
+                                                        </b><span>{{ $member->email }}</span></p>
+                                                </div>
+                                                <div class="social-links d-flex justify-content-center">
+                                                    <a href="#!" class="mx-2"><img
+                                                            src="{{ asset('images\email.svg') }}" alt="Email"></a>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                {{-- -------------------------------------------------editing this----------------------------------------------------------- --}}
+
+                            </div>
                         </div>
                     @endforeach
                 </div>
@@ -541,4 +597,6 @@ height : 60vh;">
             </div>
 
     </section>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
 @endsection

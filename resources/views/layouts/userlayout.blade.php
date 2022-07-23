@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
         integrity="sha256-GqiEX9BuR1rv5zPU5Vs2qS/NSHl1BJyBcjQYJ6ycwD4=" crossorigin="anonymous" />
     <link href="/css/ihover.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/knowmorecard.css">
     @yield('links')
     <style>
         .nav-link:hover {
