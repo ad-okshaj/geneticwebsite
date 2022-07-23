@@ -477,11 +477,12 @@ height : 60vh;">
 
                                 {{-- -------------------------------------------------editing this----------------------------------------------------------- --}}
 
-                                <div class="modal fade" id="team{{ $member->id }}" tabindex="-1" role="dialog">
+                                <div class="modal fade container" id="team{{ $member->id }}" tabindex="-1"
+                                    role="dialog">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h4 class="text-center" style="color:black">
+                                                <h4 class="text-center mb-4" style="color:black">
                                                     <b>{{ $member->name }}</b>
                                                 </h4>
                                                 <button type="button" class="close" data-dismiss="modal"
@@ -493,12 +494,12 @@ height : 60vh;">
                                                 <div class="card offset-sm-3"
                                                     style="height:260px !important;width:260px !important">
                                                     <div class="text-center">
-                                                        <div class="card-img-top">
-                                                            <img class=" text-center"
-                                                                src="/download/{{ $member->photo }}"
-                                                                style="height:250px !important;width:250px !important"
-                                                                alt="Card image cap">
-                                                        </div>
+
+                                                        <img class="knowmoreimg-circle mx-auto mb-3"
+                                                            src="/download/{{ $member->photo }}"
+                                                            style="height:250px !important;width:250px !important"
+                                                            alt="Card image cap">
+
                                                     </div>
                                                 </div><br>
                                                 <div class="text-center mb-4">
