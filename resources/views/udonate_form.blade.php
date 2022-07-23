@@ -4,7 +4,7 @@
 @endsection
 @section('usercontent')
     <div class="container mt-3 mb-3">
-        <h2 class="mt-4" style="color: gray;padding-bottom: 1em;">Details of the donor</h2>
+        <h2 class="mt-5" style="color: gray;padding-bottom: 1em;">Details of the donor</h2>
         <form method="post" action="donate_form">
             @csrf
             <div class="form-row">
@@ -69,9 +69,9 @@
                 </div>
             </div>
 
-            <button type="submit" class="btn btn-outline-primary float-right">Donate</button>
+            <button type="submit" class="btn btn-outline-primary float-right mt-4">Donate</button>
         </form><br><br>
-        <div class="conatiner mt-4 mb-4">
+        <div class="container mt-4 mb-5">
             <h5>Please note:</h5><br>
             <p style="text-align: justify">
                 <b>TAX EXEMPTION INFORMATION FOR DONORS :</b><br>
